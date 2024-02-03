@@ -1,0 +1,80 @@
+.input-container {
+    padding: 10px;
+    text-align: center;
+}
+
+.form-container {
+    width: 15%;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+label {
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+    color: #FCFFF9;
+}
+
+.button-start {
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #07282F;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s ease; /* Анімація для зміни трансформації (розміру) */
+    font-weight: bold;
+}
+
+.button-start:hover {
+    background-color: #092e36; /* Колір фону при наведенні курсора */
+}
+
+.button-start:active {
+    transform: scale(0.95); /* Зменшення розміру при натисканні */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+    text-align: center;
+}
+
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+
+.return-link {
+    color: #FCFFF9;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.return-link:hover {
+    text-decoration: underline;
+}

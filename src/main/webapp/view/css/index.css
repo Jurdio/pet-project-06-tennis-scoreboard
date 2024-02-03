@@ -1,0 +1,42 @@
+header {
+    background-color: #264C59; /* колір хедера */
+    color: #FCFFF9; /* колір тексту в хедері */
+    padding: 15px;
+    text-align: center;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Встановлюємо шрифт для всієї сторінки */
+}
+
+.main-container {
+    background-color: #264C59;
+    margin-top: 20px;
+}
+
+.button-container {
+    padding: 10px;
+    text-align: center;
+}
+
+.button {
+    width: 15%;
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #07282F;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s ease; /* Анімація для зміни трансформації (розміру) */
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #092e36; /* Колір фону при наведенні курсора */
+}
+
+.button:active {
+    transform: scale(0.95); /* Зменшення розміру при натисканні */
+}
