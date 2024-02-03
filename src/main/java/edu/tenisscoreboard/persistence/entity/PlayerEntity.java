@@ -6,8 +6,11 @@ import lombok.*;
 
 
 @Entity
-@Data
 @Table(name = "players")
+@Data
+@Builder
+@AllArgsConstructor
+@RequiredArgsConstructor
 public class PlayerEntity {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
