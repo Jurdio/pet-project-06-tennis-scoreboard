@@ -9,12 +9,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/filter/EncodingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/new-match.jsp" afterDir="false" />
+    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="add EncodingFilter.java and write new-match.jsp">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchScoreController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/OngoingMatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/repository/MatchRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/repository/PlayerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchScoreCalculationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/OngoingMatchService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/PlayerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/util/HibernateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/match-score.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/test.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/config/HibernateConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/NewMatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/NewMatchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/dto/MatchDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/dto/MatchDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Score.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/mapper/MatchMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/mapper/MatchMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/mapper/PlayerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/mapper/PlayerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/entity/MatchEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/entity/MatchEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/entity/PlayerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/entity/PlayerEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/repository/CrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/repository/CrudRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/new-match.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/new-match.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +48,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="HTTP Request" />
         <option value="Class" />
         <option value="Jsp File" />
       </list>
@@ -33,9 +57,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -50,9 +74,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2bcawQy6EHWFAslguyXt9CqXpvK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -61,6 +85,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "HTTP Request.test | #1.executor": "Run",
     "Maven.tenis-score-board [clean].executor": "Run",
     "Maven.tenis-score-board [install].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -74,11 +99,24 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dmytro\IdeaProjects\tenis-score-board\src\main\webapp\view" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.18">
+    <configuration name="test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/test/test.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="Tomcat 10.1.18" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.18" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="tenis-score-board:war exploded">
           <settings>
@@ -164,6 +202,15 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="HTTP Request.test | #1" />
+      <item itemvalue="Tomcat Server.Tomcat 10.1.18" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.test | #1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -173,7 +220,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706517062922</updated>
-      <workItem from="1706517063992" duration="13900000" />
+      <workItem from="1706517063992" duration="13930000" />
+      <workItem from="1706634526083" duration="883000" />
+      <workItem from="1706698504373" duration="12133000" />
+      <workItem from="1706870239484" duration="7651000" />
+      <workItem from="1706887936884" duration="8021000" />
+      <workItem from="1706900037797" duration="1834000" />
+      <workItem from="1706902196594" duration="14390000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -183,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706540211066</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add EncodingFilter.java and write new-match.jsp">
+      <option name="closed" value="true" />
+      <created>1706549788034</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706549788034</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +252,62 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="add EncodingFilter.java and write new-match.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="add EncodingFilter.java and write new-match.jsp" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchService.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchService.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchService.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchService.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/repository/PlayerRepository.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/PlayerService.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/PlayerService.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/PlayerService.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchService.java</url>
+          <line>19</line>
+          <properties class="edu.tenisscoreboard.service.MatchService" method="getAllMatches">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
