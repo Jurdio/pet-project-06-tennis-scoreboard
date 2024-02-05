@@ -1,0 +1,91 @@
+header {
+    background-color: #264C59; /* колір хедера */
+    color: #FCFFF9; /* колір тексту в хедері */
+    padding: 15px;
+    text-align: center;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Встановлюємо шрифт для всієї сторінки */
+    color: #FCFFF9; /* колір тексту в хедері */
+}
+.main-container {
+    background-color: #264C59;
+    margin-top: 20px;
+    padding: 10px;
+}
+.border-container{
+    border: 5px solid white;
+    padding: 10px;
+}
+.gameplay-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.gameplay-container > div{
+    margin-bottom: 10px;
+}
+
+.matchId-container{
+    text-align: center;
+}
+.info-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gameplay-info-container{
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+.gameplay-info-container > div {
+    margin-left: 3%;
+}
+.gameplay-text-container{
+    width: 60%;
+    display: flex;
+}
+.gameplay-text-container > div{
+    margin-left: 3%;
+}
+.player-name-container{
+    width: 40%;
+    text-align: right;
+}
+.serve-container{
+    width: 30px;
+    height: 30px;
+    background-color: #072432;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.serve-point{
+    width: 70%;
+    height: 70%;
+    background-color: red;
+    border-radius: 50%;
+}
+.game-container{
+    height: 50px;
+    width: 70px;
+    background-color:  #072432;
+}
+.first-set{
+    height: 50px;
+    width: 35px;
+    background-color:  #072432;
+}
+.second-set{
+    height: 50px;
+    width: 35px;
+    background-color:  #072432;
+}
+.third-set{
+    height: 50px;
+    width: 35px;
+    background-color:  #072432;
+}

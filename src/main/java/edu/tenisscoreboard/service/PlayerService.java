@@ -21,9 +21,6 @@ public class PlayerService {
         PlayerEntity entity = playerRepository.findByName(name)
                 .orElseGet(() -> playerRepository.save(PlayerEntity.builder().name(name).build()));
 
-        Player player = playerMapper.toPlayer(entity);
-
-        // Add logging statements here to trace values
-        return player;
+        return playerMapper.toPlayer(entity);
     }
 }
