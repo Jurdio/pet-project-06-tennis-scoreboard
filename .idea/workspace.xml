@@ -10,12 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="a lot of changes">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/css/new-match.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/js/new-match.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/css/match-score.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchScoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/NewMatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/NewMatchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/OngoingMatchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/OngoingMatchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/PlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/css/new-match.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/css/new-match.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/js/new-match.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/match-score.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/match-score.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/new-match.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/new-match.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +78,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 10.1.18.executor": "Run",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -211,6 +216,9 @@
       <workItem from="1706900037797" duration="1834000" />
       <workItem from="1706902196594" duration="16173000" />
       <workItem from="1706968416723" duration="9096000" />
+      <workItem from="1706987136496" duration="1075000" />
+      <workItem from="1707063217781" duration="149000" />
+      <workItem from="1707064987606" duration="15472000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -285,19 +293,14 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/PlayerService.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="24" />
+          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/NewMatchController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/PlayerService.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/PlayerService.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="27" />
+          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/NewMatchController.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchService.java</url>

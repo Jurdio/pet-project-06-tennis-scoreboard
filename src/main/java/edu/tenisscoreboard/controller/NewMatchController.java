@@ -36,8 +36,8 @@ public class NewMatchController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String firstPlayerName = req.getParameter("player-1").toUpperCase();
-        String secondPlayerName = req.getParameter("player-2").toUpperCase();
+        String firstPlayerName = req.getParameter("player1").toUpperCase();
+        String secondPlayerName = req.getParameter("player2").toUpperCase();
 
         resp.sendRedirect("match-score?uuid=" + OngoingMatchService.getInstance()
                 .createMatch(playerService.findOrCreatePlayer(firstPlayerName),playerService.findOrCreatePlayer(secondPlayerName)));

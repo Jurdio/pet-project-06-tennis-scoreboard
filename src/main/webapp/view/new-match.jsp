@@ -13,9 +13,6 @@
 </style>
 <head>
     <title>Tennis Scoreboard</title>
-    <script>
-
-    </script>
 </head>
 <body>
 <header>
@@ -31,9 +28,6 @@
             <button class="button-start" type="submit">START GAME</button>
             <button class="button-start" onclick="redirectToMain()">BACK TO MENU</button>
         </form>
-    </div>
-    <div>
-        <a href="${pageContext.request.contextPath}/">Return to main page</a>
     </div>
 </div>
 <script>

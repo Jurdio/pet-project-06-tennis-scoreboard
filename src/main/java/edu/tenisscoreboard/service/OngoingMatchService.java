@@ -42,4 +42,8 @@ public class OngoingMatchService {
 
         return id;
     }
+
+    public OngoingMatch getMatch (UUID id){
+        return ongoingMatches.get(id);
+    }
 }
