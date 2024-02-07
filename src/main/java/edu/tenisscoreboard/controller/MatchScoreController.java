@@ -22,8 +22,8 @@ public class MatchScoreController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         OngoingMatch ongoingMatch = ongoingMatchService.getMatch(UUID.fromString(req.getParameter("uuid")));
-        matchScoreCalculationService = new MatchScoreCalculationService(ongoingMatch.getMatchScore());
-        log.debug("Score :{}",ongoingMatch.getMatchScore().getCurrentGame().getFirstPlayerScore());
+        matchScoreCalculationService = new MatchScoreCalculationService(ongoingMatch.getMatchSc());
+        log.debug("Score :{}",ongoingMatch.getMatchSc().getGame().getFirstPlayerScore());
         req.setAttribute("ongoingMatch", ongoingMatch);
         req.getRequestDispatcher("/view/match-score.jsp").forward(req,resp);
     }

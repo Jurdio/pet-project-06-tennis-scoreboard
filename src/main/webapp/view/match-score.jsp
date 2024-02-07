@@ -1,4 +1,3 @@
-<%@ page import="edu.tenisscoreboard.domain.OngoingMatch" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page isELIgnored="false" %>
@@ -27,15 +26,23 @@
                         </c:if>
                     </div>
                     <div class="game-container">
-                        <span id="firstPlayerScore">${ongoingMatch.getMatchScore().getCurrentGame().getFirstPlayerScore()}</span>
+                        <span>${ongoingMatch.getMatchSc().getGame().getFirstPlayerScore().getValue()}</span>
                     </div>
                     <div class="first-set">
-                        <c:if test="${ongoingMatch.matchScore.sets[0] ne null} ne null">
-                            ${ongoingMatch.getMatchScore().getSets().get(0).getFirstPlayerScore()}
+                        <c:if test="${ongoingMatch.matchSc.sets[0] ne null}">
+                            ${ongoingMatch.matchSc.sets[0].firstPlayerScore}
                         </c:if>
                     </div>
-                    <div class="second-set"></div>
-                    <div class="third-set"></div>
+                    <div class="second-set">
+                        <c:if test="${ongoingMatch.matchSc.sets[1] ne null}">
+                            ${ongoingMatch.matchSc.sets[1].firstPlayerScore}
+                        </c:if>
+                    </div>
+                    <div class="third-set">
+                        <c:if test="${ongoingMatch.matchSc.sets[2] ne null}">
+                            ${ongoingMatch.matchSc.sets[2].firstPlayerScore}
+                        </c:if>
+                    </div>
                 </div>
             </div>
             <div class="info-container">
@@ -59,21 +66,21 @@
                         </c:if>
                     </div>
                     <div class="game-container">
-                        <span>${ongoingMatch.getMatchScore().getCurrentGame().getSecondPlayerScore()}</span>
+                        <span>${ongoingMatch.getMatchSc().getGame().getSecondPlayerScore().getValue()}</span>
                     </div>
                     <div class="first-set">
-                        <c:if test="${ongoingMatch.matchScore.sets[0] ne null}">
-                            ${ongoingMatch.matchScore.sets[0].secondPlayerScore}
+                        <c:if test="${ongoingMatch.matchSc.sets[0] ne null}">
+                            ${ongoingMatch.matchSc.sets[0].secondPlayerScore}
                         </c:if>
                     </div>
                     <div class="second-set">
-                        <c:if test="${ongoingMatch.matchScore.sets[1] ne null}">
-                            ${ongoingMatch.matchScore.sets[1].secondPlayerScore}
+                        <c:if test="${ongoingMatch.matchSc.sets[1] ne null}">
+                            ${ongoingMatch.matchSc.sets[1].secondPlayerScore}
                         </c:if>
                     </div>
                     <div class="third-set">
-                        <c:if test="${ongoingMatch.matchScore.sets[2] ne null}">
-                            ${ongoingMatch.matchScore.sets[1].secondPlayerScore}
+                        <c:if test="${ongoingMatch.matchSc.sets[2] ne null}">
+                            ${ongoingMatch.matchSc.sets[2].secondPlayerScore}
                         </c:if>
                     </div>
                 </div>
@@ -81,10 +88,12 @@
         </div>
         <div class="button-container">
             <form method="post">
-                <button class="button-game" value="false">POINT FOR PLAYER 1</button>
+                <button class="button-game" name="value" value="true">POINT FOR PLAYER 1</button>
             </form>
             <button class="button-game">CONTINUE</button>
-            <button class="button-game">POINT FOR PLAYER 2</button>
+            <form method="post">
+                <button class="button-game" name="value" value="false">POINT FOR PLAYER 2</button>
+            </form>
         </div>
         <div class="matchId-container">
             <h6>MATCH ID : ${ongoingMatch.getId()} </h6>
