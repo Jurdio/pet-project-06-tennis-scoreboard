@@ -4,9 +4,10 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 
+@Getter
 @RequiredArgsConstructor
 public enum Point {
-    LOVE("0"), FIFTEEN("15"), THIRTY("30"), FORTY("40"), ADVANTAGE("AD");
+    LOVE("0"), FIFTEEN("15"), THIRTY("30"), FORTY("40"),ADVANTAGE("AD");
 
     public Point next() {
         if (this == ADVANTAGE) {
@@ -16,7 +17,14 @@ public enum Point {
         }
 
     }
-    @Getter
+    public Point previous(){
+        if (this == LOVE) {
+            throw new IllegalArgumentException("Can`t call next() on Previous");
+        } else {
+            return Point.values()[this.ordinal() - 1];
+        }
+    }
+
     private final String value;
 
 }

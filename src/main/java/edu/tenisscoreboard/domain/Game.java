@@ -7,15 +7,64 @@ import lombok.RequiredArgsConstructor;
 public class Game {
     private final int diff;
     @Getter
-    private Point firstPlayerScore;
+    private Point firstPlayerScore = Point.LOVE;
     @Getter
-    private Point secondPlayerScore;
+    private Point secondPlayerScore = Point.LOVE;
 
-    void addPoint (boolean firstPlayerWin) throws CompletedException {
-        if (firstPlayerWin) {
-            firstPlayerScore.next();
+    void addPoint(boolean firstPlayerWin) throws CompletedException {
+        if (isGamePoint()) {
+            if (firstPlayerScore == Point.FORTY) {
+                if (firstPlayerWin) {
+                    throwMatch();
+                } else {
+                    secondPlayerScore = secondPlayerScore.next();
+                }
+            }
+            if (secondPlayerScore == Point.FORTY) {
+                if (firstPlayerWin) {
+                    firstPlayerScore = firstPlayerScore.next();
+                } else {
+                    throwMatch();
+                }
+            }
+        } else if (firstPlayerScore.ordinal() >= Point.FORTY.ordinal() && secondPlayerScore.ordinal() >= Point.FORTY.ordinal()) {
+            if (firstPlayerScore == Point.ADVANTAGE){
+                if (firstPlayerWin){
+                    throwMatch();
+                } else {
+                    firstPlayerScore = firstPlayerScore.previous();
+                }
+            } else if (secondPlayerScore == Point.ADVANTAGE) {
+                if (firstPlayerWin) {
+                    secondPlayerScore = secondPlayerScore.previous();
+                } else {
+                    throwMatch();
+                }
+            } else {
+                if (firstPlayerWin) {
+                    firstPlayerScore = firstPlayerScore.next();
+                } else {
+                    secondPlayerScore = secondPlayerScore.next();
+                }
+            }
         } else {
-            secondPlayerScore.next();
+            if (firstPlayerWin) {
+                firstPlayerScore = firstPlayerScore.next();
+            } else {
+                secondPlayerScore = secondPlayerScore.next();
+            }
         }
+
+    }
+
+    boolean isGamePoint() {
+        if (firstPlayerScore == Point.FORTY || secondPlayerScore == Point.FORTY) {
+            return true;
+        }
+        return false;
+    }
+
+    void throwMatch() throws CompletedException {
+        throw new CompletedException(firstPlayerScore.ordinal() > secondPlayerScore.ordinal());
     }
 }
