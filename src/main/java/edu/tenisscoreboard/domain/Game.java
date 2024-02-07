@@ -1,26 +1,21 @@
 package edu.tenisscoreboard.domain;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
-@Data
+@RequiredArgsConstructor
 public class Game {
+    private final int diff;
     @Getter
-    @RequiredArgsConstructor
-    public enum Score {
-        LOVE("0"), FIFTEEN("15"), THIRTY("30"), FORTY("40"), ADVANTAGE("AD");
+    private Point firstPlayerScore;
+    @Getter
+    private Point secondPlayerScore;
 
-        private final String value;
+    void addPoint (boolean firstPlayerWin) throws CompletedException {
+        if (firstPlayerWin) {
+            firstPlayerScore.next();
+        } else {
+            secondPlayerScore.next();
+        }
     }
-    private Score firstPlayerScore = Score.LOVE;
-    private Score secondPlayerScore = Score.LOVE;
-
-
-
-
-
-
-
-
 }

@@ -41,6 +41,13 @@ body {
     display: flex;
     align-items: center;
 }
+.text {
+    font-size: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .gameplay-info-container > div {
     margin-left: 3%;
 }
@@ -74,10 +81,19 @@ body {
     width: 70px;
     background-color:  #072432;
 }
+.game-container span {
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 .first-set{
     height: 50px;
     width: 35px;
     background-color:  #072432;
+    font-size: 45px;
+    text-align: center;
 }
 .second-set{
     height: 50px;
@@ -88,4 +104,29 @@ body {
     height: 50px;
     width: 35px;
     background-color:  #072432;
+}
+.button-game {
+    width: 15%;
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #072432;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s ease; /* Анімація для зміни трансформації (розміру) */
+    font-weight: bold;
+}
+
+.button-game:hover {
+    background-color: #092e36; /* Колір фону при наведенні курсора */
+}
+
+.button-game:active {
+    transform: scale(0.95); /* Зменшення розміру при натисканні */
+}
+.button-container {
+    display: flex;
+
 }
