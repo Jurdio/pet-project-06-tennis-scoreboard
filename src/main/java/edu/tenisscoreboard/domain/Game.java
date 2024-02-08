@@ -12,24 +12,9 @@ public class Game {
     private Point secondPlayerScore = Point.LOVE;
 
     void addPoint(boolean firstPlayerWin) throws CompletedException {
-        if (isGamePoint()) {
-            if (firstPlayerScore == Point.FORTY) {
+        if (firstPlayerScore.ordinal() >= Point.FORTY.ordinal() && secondPlayerScore.ordinal() >= Point.FORTY.ordinal()) {
+            if (firstPlayerScore == Point.ADVANTAGE) {
                 if (firstPlayerWin) {
-                    throwMatch();
-                } else {
-                    secondPlayerScore = secondPlayerScore.next();
-                }
-            }
-            if (secondPlayerScore == Point.FORTY) {
-                if (firstPlayerWin) {
-                    firstPlayerScore = firstPlayerScore.next();
-                } else {
-                    throwMatch();
-                }
-            }
-        } else if (firstPlayerScore.ordinal() >= Point.FORTY.ordinal() && secondPlayerScore.ordinal() >= Point.FORTY.ordinal()) {
-            if (firstPlayerScore == Point.ADVANTAGE){
-                if (firstPlayerWin){
                     throwMatch();
                 } else {
                     firstPlayerScore = firstPlayerScore.previous();
@@ -45,6 +30,21 @@ public class Game {
                     firstPlayerScore = firstPlayerScore.next();
                 } else {
                     secondPlayerScore = secondPlayerScore.next();
+                }
+            }
+
+        } else if (isGamePoint()) {
+            if (firstPlayerScore == Point.FORTY) {
+                if (firstPlayerWin) {
+                    throwMatch();
+                } else {
+                    secondPlayerScore = secondPlayerScore.next();
+                }
+            } else {
+                if (firstPlayerWin) {
+                    firstPlayerScore = firstPlayerScore.next();
+                } else {
+                    throwMatch();
                 }
             }
         } else {

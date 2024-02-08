@@ -9,18 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="я хз що писать пыздец">
+    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="add calculation logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchScoreController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchSc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchSc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchScore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/OngoingMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/OngoingMatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Set.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchScoreCalculationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchScoreCalculationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/OngoingMatchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/OngoingMatchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/match-score.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/match-score.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +212,8 @@
       <workItem from="1707064987606" duration="20432000" />
       <workItem from="1707209712140" duration="22586000" />
       <workItem from="1707245799704" duration="5251000" />
-      <workItem from="1707294259041" duration="24803000" />
+      <workItem from="1707294259041" duration="24908000" />
+      <workItem from="1707381181668" duration="2421000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -271,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707306790099</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add calculation logic">
+      <option name="closed" value="true" />
+      <created>1707327903569</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707327903569</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +294,8 @@
     <MESSAGE value="a lot of changes" />
     <MESSAGE value="add front" />
     <MESSAGE value="я хз що писать пыздец" />
-    <option name="LAST_COMMIT_MESSAGE" value="я хз що писать пыздец" />
+    <MESSAGE value="add calculation logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="add calculation logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
