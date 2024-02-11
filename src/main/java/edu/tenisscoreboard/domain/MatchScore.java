@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.LinkedList;
 
 @Data
-public class MatchSc {
+public class MatchScore {
     private static final int MATCH_MAX_SCORE = 2;
     private static final int MATCH_DIFF = 1;
     private static final int SET_MAX_SCORE = 7;
@@ -16,7 +16,7 @@ public class MatchSc {
     private LinkedList<Set> sets;
     private Game game;
 
-    public MatchSc(){
+    public MatchScore(){
         match = new Score(MATCH_MAX_SCORE,MATCH_DIFF);
         sets = new LinkedList<>();
         sets.add(new Set(SET_DIFF));

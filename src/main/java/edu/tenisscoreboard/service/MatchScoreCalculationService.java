@@ -2,17 +2,18 @@ package edu.tenisscoreboard.service;
 
 import edu.tenisscoreboard.domain.CompletedException;
 import edu.tenisscoreboard.domain.MatchSc;
+import edu.tenisscoreboard.domain.OngoingMatch;
 import lombok.RequiredArgsConstructor;
 
+import java.util.UUID;
 
 
-@RequiredArgsConstructor
 public class MatchScoreCalculationService {
-    private final MatchSc matchSc;
 
-    public void addPoint(boolean isPointForFirstPlayer){
+    public void addPoint(String id, String value){
+        OngoingMatch ongoingMatch = OngoingMatchService.getInstance().getMatch(UUID.fromString(id));
         try {
-            matchSc.addPoint(isPointForFirstPlayer);
+            ongoingMatch.getMatchSc().addPoint(Boolean.parseBoolean(value));
         } catch (CompletedException e) {
             throw new RuntimeException(e);
         }

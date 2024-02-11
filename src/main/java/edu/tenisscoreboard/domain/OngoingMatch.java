@@ -12,5 +12,5 @@ public class OngoingMatch {
     private final Player firstPlayer;
     private final Player secondPlayer;
     private int serving;
-    private MatchSc matchSc;
+    private MatchScore matchScore;
 }
