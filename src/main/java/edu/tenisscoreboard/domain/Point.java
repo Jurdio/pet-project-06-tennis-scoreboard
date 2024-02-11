@@ -4,9 +4,8 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 
-@Getter
 @RequiredArgsConstructor
-public enum Point {
+public enum Point implements ScoreValueProvider {
     LOVE("0"), FIFTEEN("15"), THIRTY("30"), FORTY("40"),ADVANTAGE("AD");
 
     public Point next() {
@@ -24,7 +23,10 @@ public enum Point {
             return Point.values()[this.ordinal() - 1];
         }
     }
-
     private final String value;
 
+    @Override
+    public String getValue() {
+        return value;
+    }
 }

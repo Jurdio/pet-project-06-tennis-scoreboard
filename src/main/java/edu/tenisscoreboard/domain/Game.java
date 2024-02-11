@@ -4,14 +4,14 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class Game {
+public class Game extends GameScore<Point> {
     private final int diff;
     @Getter
     private Point firstPlayerScore = Point.LOVE;
     @Getter
     private Point secondPlayerScore = Point.LOVE;
-
-    void addPoint(boolean firstPlayerWin) throws CompletedException {
+    @Override
+    public void addPoint(boolean firstPlayerWin) throws CompletedException {
         if (firstPlayerScore.ordinal() >= Point.FORTY.ordinal() && secondPlayerScore.ordinal() >= Point.FORTY.ordinal()) {
             if (firstPlayerScore == Point.ADVANTAGE) {
                 if (firstPlayerWin) {
@@ -56,6 +56,7 @@ public class Game {
         }
 
     }
+
 
     boolean isGamePoint() {
         if (firstPlayerScore == Point.FORTY || secondPlayerScore == Point.FORTY) {
