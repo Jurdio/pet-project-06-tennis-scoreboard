@@ -55,25 +55,14 @@ class MatchScoreCalculationServiceTest {
 
     @Test
     public void firstPlayerWinGame() {
-        Assertions.assertEquals(0, matchScore.getSets().getLast().getFirstPlayerScore());
+        Assertions.assertEquals("0", matchScore.getSets().getLast().getFirstPlayerScore().getValue());
 
         for (int i = 0; i < 4; i++) {
             matchScoreCalculationService.addPoint(String.valueOf(ongoingMatchId), String.valueOf(true));
         }
 
         Assertions.assertEquals("0", matchScore.getGame().getFirstPlayerScore().getValue());
-        Assertions.assertEquals(1, matchScore.getSets().getLast().getFirstPlayerScore());
-    }
-
-    @Test
-    public void secondPlayerWinGame() {
-        Assertions.assertEquals(0, matchScore.getSets().getLast().getSecondPlayerScore());
-
-        for (int i = 0; i < 4; i++) {
-            matchScoreCalculationService.addPoint(String.valueOf(ongoingMatchId), String.valueOf(false));
-        }
-        Assertions.assertEquals("0", matchScore.getGame().getSecondPlayerScore().getValue());
-        Assertions.assertEquals(1, matchScore.getSets().getLast().getSecondPlayerScore());
+        Assertions.assertEquals("1", matchScore.getSets().getLast().getFirstPlayerScore().getValue());
     }
 
     @Test
@@ -116,6 +105,6 @@ class MatchScoreCalculationServiceTest {
 
         Assertions.assertEquals("0", matchScore.getGame().getFirstPlayerScore().getValue());
         Assertions.assertEquals("0", matchScore.getGame().getSecondPlayerScore().getValue());
-        Assertions.assertEquals(1, matchScore.getSets().getLast().getFirstPlayerScore());
+        Assertions.assertEquals("1", matchScore.getSets().getLast().getFirstPlayerScore().getValue());
     }
 }

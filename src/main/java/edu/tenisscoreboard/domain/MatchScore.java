@@ -14,7 +14,7 @@ public class MatchScore {
 
     private Score match;
     private LinkedList<Set> sets;
-    private Game game;
+    private GameScore<?> game;
 
     public MatchScore(){
         match = new Score(MATCH_MAX_SCORE,MATCH_DIFF);
@@ -33,7 +33,8 @@ public class MatchScore {
                 match.addPoint(setCompleted.firstPlayerWin);
                 sets.add(new Set(2));
             }
-            game = new Game(2);
+            game = sets.getLast().createGame();
         }
     }
+
 }

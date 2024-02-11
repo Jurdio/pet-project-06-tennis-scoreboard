@@ -1,25 +1,33 @@
 package edu.tenisscoreboard.domain;
 
+import edu.tenisscoreboard.wrapper.IntegerWrapper;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class Set {
-
+@Getter
+public class Set extends GameScore<IntegerWrapper>{
     private final int diff;
-    @Getter
-    private int firstPlayerScore;
-    @Getter
-    private int secondPlayerScore;
+    private final IntegerWrapper firstPlayerScore = new IntegerWrapper(0);
+    private final IntegerWrapper secondPlayerScore = new IntegerWrapper(0);
 
-    void addPoint (boolean firstPlayerWin) throws CompletedException {
+    public void addPoint(boolean firstPlayerWin) throws CompletedException {
         if (firstPlayerWin) {
-            firstPlayerScore++;
+            firstPlayerScore.add(1);
         } else {
-            secondPlayerScore++;
+            secondPlayerScore.add(1);
         }
-        if (Math.abs(firstPlayerScore - secondPlayerScore) >= diff && (firstPlayerScore >= 6 || secondPlayerScore >= 6)){
-            throw new CompletedException(firstPlayerScore > secondPlayerScore);
+        if ((Math.abs(firstPlayerScore.getInteger() - secondPlayerScore.getInteger()) >= 2 && (firstPlayerScore.getInteger() >= 6 || secondPlayerScore.getInteger() >= 6))){
+            throw new CompletedException(firstPlayerScore.getInteger() > secondPlayerScore.getInteger());
         }
+        if (firstPlayerScore.getInteger() == 7 && secondPlayerScore.getInteger() == 6){
+            throw new CompletedException(firstPlayerScore.getInteger() > secondPlayerScore.getInteger());
+        }
+        if (firstPlayerScore.getInteger() == 6 && secondPlayerScore.getInteger() == 7){
+            throw new CompletedException(firstPlayerScore.getInteger() > secondPlayerScore.getInteger());
+        }
+    }
+    GameScore<?> createGame() {
+        return firstPlayerScore.getInteger() == 6 && secondPlayerScore.getInteger() == 6 ? new TieBreakGame() : new Game(2);
     }
 }

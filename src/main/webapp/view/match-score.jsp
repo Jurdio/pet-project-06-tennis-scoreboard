@@ -26,21 +26,21 @@
                         </c:if>
                     </div>
                     <div class="game-container">
-                        <span>${ongoingMatch.getMatchSc().getGame().getFirstPlayerScore().getValue()}</span>
+                        <span>${ongoingMatch.getMatchScore().getGame().getFirstPlayerScore().getValue()}</span>
                     </div>
                     <div class="first-set">
-                        <c:if test="${ongoingMatch.matchSc.sets[0] ne null}">
-                            ${ongoingMatch.matchSc.sets[0].firstPlayerScore}
+                        <c:if test="${ongoingMatch.matchScore.sets[0] ne null}">
+                            ${ongoingMatch.matchScore.sets[0].firstPlayerScore.getValue()}
                         </c:if>
                     </div>
                     <div class="second-set">
-                        <c:if test="${ongoingMatch.matchSc.sets[1] ne null}">
-                            ${ongoingMatch.matchSc.sets[1].firstPlayerScore}
+                        <c:if test="${ongoingMatch.matchScore.sets[1] ne null}">
+                            ${ongoingMatch.matchScore.sets[1].firstPlayerScore.getValue()}
                         </c:if>
                     </div>
                     <div class="third-set">
-                        <c:if test="${ongoingMatch.matchSc.sets[2] ne null}">
-                            ${ongoingMatch.matchSc.sets[2].firstPlayerScore}
+                        <c:if test="${ongoingMatch.matchScore.sets[2] ne null}">
+                            ${ongoingMatch.matchScore.sets[2].firstPlayerScore.getValue()}
                         </c:if>
                     </div>
                 </div>
@@ -66,21 +66,21 @@
                         </c:if>
                     </div>
                     <div class="game-container">
-                        <span>${ongoingMatch.getMatchSc().getGame().getSecondPlayerScore().getValue()}</span>
+                        <span>${ongoingMatch.getMatchScore().getGame().getSecondPlayerScore().getValue()}</span>
                     </div>
                     <div class="first-set">
-                        <c:if test="${ongoingMatch.matchSc.sets[0] ne null}">
-                            ${ongoingMatch.matchSc.sets[0].secondPlayerScore}
+                        <c:if test="${ongoingMatch.matchScore.sets[0] ne null}">
+                            ${ongoingMatch.matchScore.sets[0].secondPlayerScore.getValue()}
                         </c:if>
                     </div>
                     <div class="second-set">
-                        <c:if test="${ongoingMatch.matchSc.sets[1] ne null}">
-                            ${ongoingMatch.matchSc.sets[1].secondPlayerScore}
+                        <c:if test="${ongoingMatch.matchScore.sets[1] ne null}">
+                            ${ongoingMatch.matchScore.sets[1].secondPlayerScore.getValue()}
                         </c:if>
                     </div>
                     <div class="third-set">
-                        <c:if test="${ongoingMatch.matchSc.sets[2] ne null}">
-                            ${ongoingMatch.matchSc.sets[2].secondPlayerScore}
+                        <c:if test="${ongoingMatch.matchScore.sets[2] ne null}">
+                            ${ongoingMatch.matchScore.sets[2].secondPlayerScore.getValue()}
                         </c:if>
                     </div>
                 </div>
