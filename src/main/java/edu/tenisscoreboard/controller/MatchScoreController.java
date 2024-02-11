@@ -17,12 +17,11 @@ import java.util.UUID;
 @Slf4j
 public class MatchScoreController extends HttpServlet {
     private final OngoingMatchService ongoingMatchService = OngoingMatchService.getInstance();
-    private MatchScoreCalculationService matchScoreCalculationService;
+    private final MatchScoreCalculationService matchScoreCalculationService = new MatchScoreCalculationService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         OngoingMatch ongoingMatch = ongoingMatchService.getMatch(UUID.fromString(req.getParameter("uuid")));
-        matchScoreCalculationService = new MatchScoreCalculationService(ongoingMatch.getMatchSc());
         log.debug("Score :{}",ongoingMatch.getMatchSc().getGame().getFirstPlayerScore());
         req.setAttribute("ongoingMatch", ongoingMatch);
         req.getRequestDispatcher("/view/match-score.jsp").forward(req,resp);
@@ -33,7 +32,7 @@ public class MatchScoreController extends HttpServlet {
         String uuid = req.getParameter("uuid");
         String value = req.getParameter("value");
         log.debug("{}", value);
-        matchScoreCalculationService.addPoint(Boolean.parseBoolean(value));
+        matchScoreCalculationService.addPoint(uuid,value);
 
 
 

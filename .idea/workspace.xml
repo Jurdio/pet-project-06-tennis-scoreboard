@@ -9,9 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="add calculation logic">
+    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="write correct algo for counting point">
+      <change afterPath="$PROJECT_DIR$/src/test/java/edu/tennisscoreboard/service/MatchScoreCalculationServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchScoreController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchSc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchScore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/OngoingMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/OngoingMatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchScoreCalculationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchScoreCalculationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/OngoingMatchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/OngoingMatchService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +36,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="fbdaee5285b1eaf65e411b0adc64d18cdfa84cd6" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="KubernetesApiProvider">{
@@ -61,6 +72,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "HTTP Request.test | #1.executor": "Run",
+    "JUnit.MatchScoreCalculationServiceTest.executor": "Run",
+    "JUnit.MatchScoreCalculationServiceTest.firstPlayerWinGame.executor": "Run",
     "JavaScript Debug.Tomcat 10.1.18 JavaScript.executor": "Debug",
     "Maven.tenis-score-board [clean].executor": "Run",
     "Maven.tenis-score-board [install].executor": "Run",
@@ -88,9 +101,40 @@
       <recent name="C:\Users\Dmytro\IdeaProjects\tenis-score-board\src\main\webapp\view" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.18">
+  <component name="RunManager" selected="JUnit.MatchScoreCalculationServiceTest">
     <configuration name="test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/test/test.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
+    </configuration>
+    <configuration name="MatchScoreCalculationServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tenis-score-board" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.tennisscoreboard.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.tennisscoreboard.service" />
+      <option name="MAIN_CLASS_NAME" value="edu.tennisscoreboard.service.MatchScoreCalculationServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MatchScoreCalculationServiceTest.firstPlayerWinGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tenis-score-board" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.tennisscoreboard.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.tennisscoreboard.service" />
+      <option name="MAIN_CLASS_NAME" value="edu.tennisscoreboard.service.MatchScoreCalculationServiceTest" />
+      <option name="METHOD_NAME" value="firstPlayerWinGame" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Tomcat 10.1.18" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.18" ALTERNATIVE_JRE_ENABLED="false">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
@@ -183,10 +227,16 @@
     </configuration>
     <list>
       <item itemvalue="HTTP Request.test | #1" />
+      <item itemvalue="JUnit.MatchScoreCalculationServiceTest" />
+      <item itemvalue="JUnit.MatchScoreCalculationServiceTest.firstPlayerWinGame" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.18" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MatchScoreCalculationServiceTest" />
+        <item itemvalue="JUnit.MatchScoreCalculationServiceTest.firstPlayerWinGame" />
+        <item itemvalue="HTTP Request.test | #1" />
+        <item itemvalue="HTTP Request.test | #1" />
         <item itemvalue="HTTP Request.test | #1" />
       </list>
     </recent_temporary>
@@ -213,7 +263,10 @@
       <workItem from="1707209712140" duration="22586000" />
       <workItem from="1707245799704" duration="5251000" />
       <workItem from="1707294259041" duration="24908000" />
-      <workItem from="1707381181668" duration="2421000" />
+      <workItem from="1707381181668" duration="6108000" />
+      <workItem from="1707475115179" duration="27000" />
+      <workItem from="1707643566207" duration="4004000" />
+      <workItem from="1707651832859" duration="2891000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -271,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707327903569</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="write correct algo for counting point">
+      <option name="closed" value="true" />
+      <created>1707385278441</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707385278441</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +343,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -295,7 +368,8 @@
     <MESSAGE value="add front" />
     <MESSAGE value="я хз що писать пыздец" />
     <MESSAGE value="add calculation logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="add calculation logic" />
+    <MESSAGE value="write correct algo for counting point" />
+    <option name="LAST_COMMIT_MESSAGE" value="write correct algo for counting point" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -319,11 +393,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchService.java</url>
           <line>22</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchSc.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchService.java</url>

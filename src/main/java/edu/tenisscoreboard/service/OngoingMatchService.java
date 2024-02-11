@@ -1,6 +1,6 @@
 package edu.tenisscoreboard.service;
 
-import edu.tenisscoreboard.domain.MatchSc;
+import edu.tenisscoreboard.domain.MatchScore;
 import edu.tenisscoreboard.domain.OngoingMatch;
 import edu.tenisscoreboard.domain.Player;
 import lombok.Getter;
@@ -37,7 +37,7 @@ public class OngoingMatchService {
                 .firstPlayer(firstPlayer)
                 .secondPlayer(secondPlayer)
                 .serving(new Random().nextInt(2) == 0 ? firstPlayer.getId() : secondPlayer.getId())
-                .matchSc(new MatchSc())
+                .matchSc(new MatchScore())
                 .build();
         log.debug("{}",ongoingMatch.getServing());
 
