@@ -22,7 +22,7 @@ public class MatchScoreController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         OngoingMatch ongoingMatch = ongoingMatchService.getMatch(UUID.fromString(req.getParameter("uuid")));
-        log.debug("Score :{}",ongoingMatch.getMatchSc().getGame().getFirstPlayerScore());
+        log.debug("Score :{}",ongoingMatch.getMatchScore().getGame().getFirstPlayerScore());
         req.setAttribute("ongoingMatch", ongoingMatch);
         req.getRequestDispatcher("/view/match-score.jsp").forward(req,resp);
     }
