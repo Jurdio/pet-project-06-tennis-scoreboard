@@ -37,7 +37,7 @@ public class OngoingMatchService {
                 .firstPlayer(firstPlayer)
                 .secondPlayer(secondPlayer)
                 .serving(new Random().nextInt(2) == 0 ? firstPlayer.getId() : secondPlayer.getId())
-                .matchSc(new MatchScore())
+                .matchScore(new MatchScore())
                 .build();
         log.debug("{}",ongoingMatch.getServing());
 
