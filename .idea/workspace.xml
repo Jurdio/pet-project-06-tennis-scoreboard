@@ -9,17 +9,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/GameScore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/ScoreValueProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/TieBreakGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/wrapper/IntegerWrapper.java" afterDir="false" />
+    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="add TieBreakGame logic">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/GameScore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/FinishedMatchesPersistenceService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchScoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/NewMatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/NewMatchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/CompletedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/CompletedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/GameScore.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchScore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Set.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/match-score.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/match-score.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Score.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/Set.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/TieBreakGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/TieBreakGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/repository/MatchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/repository/MatchRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchScoreCalculationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchScoreCalculationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/wrapper/IntegerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/wrapper/IntegerWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/edu/tennisscoreboard/service/MatchScoreCalculationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/tennisscoreboard/service/MatchScoreCalculationServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,15 +40,15 @@
         <option value="HTTP Request" />
         <option value="Jsp File" />
         <option value="JavaScript File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fbdaee5285b1eaf65e411b0adc64d18cdfa84cd6" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,34 +79,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;HTTP Request.test | #1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MatchScoreCalculationServiceTest.correctCalculationPoints.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MatchScoreCalculationServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MatchScoreCalculationServiceTest.firstPlayerWinGame.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.Tomcat 10.1.18 JavaScript.executor&quot;: &quot;Debug&quot;,
-    &quot;Maven.tenis-score-board [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tenis-score-board [install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.18.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "HTTP Request.test | #1.executor": "Run",
+    "JUnit.MatchScoreCalculationServiceTest.correctCalculationPoints.executor": "Run",
+    "JUnit.MatchScoreCalculationServiceTest.executor": "Run",
+    "JUnit.MatchScoreCalculationServiceTest.firstPlayerWinGame.executor": "Run",
+    "JavaScript Debug.Tomcat 10.1.18 JavaScript.executor": "Debug",
+    "Maven.tenis-score-board [clean].executor": "Run",
+    "Maven.tenis-score-board [install].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Smart Tomcat.Tomcat: tenis-score-board.executor": "Run",
+    "Tomcat Server.Tomcat 10.1.18.executor": "Run",
+    "git-widget-placeholder": "fix/scoring-calculation",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dmytro\IdeaProjects\tenis-score-board\src\main\webapp\view" />
@@ -275,10 +283,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Smart Tomcat.Tomcat: tenis-score-board" />
         <item itemvalue="JUnit.MatchScoreCalculationServiceTest" />
         <item itemvalue="JUnit.MatchScoreCalculationServiceTest.firstPlayerWinGame" />
         <item itemvalue="JUnit.MatchScoreCalculationServiceTest.correctCalculationPoints" />
-        <item itemvalue="Smart Tomcat.Tomcat: tenis-score-board" />
         <item itemvalue="HTTP Request.test | #1" />
       </list>
     </recent_temporary>
@@ -309,7 +317,11 @@
       <workItem from="1707475115179" duration="27000" />
       <workItem from="1707643566207" duration="4004000" />
       <workItem from="1707651832859" duration="9946000" />
-      <workItem from="1707662251319" duration="5673000" />
+      <workItem from="1707662251319" duration="7887000" />
+      <workItem from="1707835292644" duration="3267000" />
+      <workItem from="1707989105821" duration="8652000" />
+      <workItem from="1708076398423" duration="5862000" />
+      <workItem from="1708682019672" duration="2710000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -407,7 +419,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707654902872</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add TieBreakGame logic">
+      <option name="closed" value="true" />
+      <created>1707668247063</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1707668247063</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,7 +444,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="fix/scoring-calculation" />
                       </list>
                     </value>
                   </entry>
@@ -447,39 +467,31 @@
     <MESSAGE value="add test calcutaion" />
     <MESSAGE value="fix bug with MatchScore name" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="add TieBreakGame logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="add TieBreakGame logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchService.java</url>
-          <line>21</line>
+          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/Set.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/Set.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchScore.java</url>
+          <line>38</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchService.java</url>
-          <line>24</line>
+          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchScore.java</url>
+          <line>40</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchService.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchService.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchService.java</url>
-          <line>19</line>
-          <properties class="edu.tenisscoreboard.service.MatchService" method="getAllMatches">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -73,4 +73,15 @@ public class MatchRepository implements CrudRepository<MatchEntity> {
             // Обробка винятку або повідомлення вищестоячому рівню
         }
     }
+    public List<MatchEntity> findWithPagination(int offset, int pageSize){
+        try (Session session = sessionFactory.openSession()){
+            return session.createQuery("FROM MatchEntity", MatchEntity.class)
+                    .setFirstResult(offset)
+                    .setMaxResults(pageSize)
+                    .list();
+        } catch (Exception e){
+            e.printStackTrace();
+            return List.of();
+        }
+    }
 }

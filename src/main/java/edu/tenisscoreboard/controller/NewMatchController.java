@@ -2,7 +2,6 @@ package edu.tenisscoreboard.controller;
 
 import edu.tenisscoreboard.domain.OngoingMatch;
 import edu.tenisscoreboard.mapper.MatchMapper;
-import edu.tenisscoreboard.service.MatchService;
 import edu.tenisscoreboard.service.OngoingMatchService;
 import edu.tenisscoreboard.service.PlayerService;
 import jakarta.servlet.ServletException;
@@ -18,13 +17,11 @@ import java.io.IOException;
 @WebServlet(name = "NewMatchServlet", value = "/new-match")
 @Slf4j
 public class NewMatchController extends HttpServlet {
-    private MatchService matchService;
     private PlayerService playerService;
     private MatchMapper matchMapper;
 
     @Override
     public void init() throws ServletException {
-        matchService = new MatchService();
         playerService = new PlayerService();
         matchMapper = Mappers.getMapper(MatchMapper.class);
     }
