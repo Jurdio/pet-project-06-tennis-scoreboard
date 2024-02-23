@@ -14,7 +14,7 @@
 <div class="main-container">
     <div class="button-container">
         <button onclick="redirectToCreateMatch()" class="button">CREATE NEW MATCH</button>
-        <button class="button">COMPLETED MATCHES</button>
+        <button onclick="redirectToCompletedMatchesPage()" class="button">COMPLETED MATCHES</button>
     </div>
 </div>
 <script>

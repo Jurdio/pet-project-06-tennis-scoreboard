@@ -26,7 +26,7 @@
                         </c:if>
                     </div>
                     <div class="game-container">
-                        <span>${ongoingMatch.getMatchScore().getGame().getFirstPlayerScore().getValue()}</span>
+                        <span>${requestScope.ongoingMatch.getMatchScore().getGame().getFirstPlayerScore().getValue()}</span>
                     </div>
                     <div class="first-set">
                         <c:if test="${ongoingMatch.matchScore.sets[0] ne null}">
