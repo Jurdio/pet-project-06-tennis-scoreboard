@@ -30,7 +30,7 @@ public class FinishedMatchesPersistenceService {
                 .collect(Collectors.toList());
     }
     public List<Match> getMatchesWithPagination (int page, int pageSize){
-        int offset = (page - 1) * pageSize;
+        int offset = (page) * pageSize;
         List<MatchEntity> matchEntities = matchRepository.findWithPagination(offset,pageSize);
 
         return matchEntities.stream()

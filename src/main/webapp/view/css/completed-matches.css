@@ -1,0 +1,23 @@
+.match-list{
+    list-style-type: none;
+    padding: 0;
+}
+.match-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.player-info {
+    display: flex;
+    align-items: center;
+    text-align: center; /* Центрування тексту */
+    flex: 1; /* Займає весь доступний простір */
+}
+
+.trophy-icon {
+
+    margin-left: 10px;
+}

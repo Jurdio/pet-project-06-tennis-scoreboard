@@ -42,7 +42,7 @@ public class MatchScore {
                     secondPlayerScore++;
                 }
 
-                if (firstPlayerScore + secondPlayerScore == 3) {
+                if (firstPlayerScore == 2 || secondPlayerScore == 2) {
                     throw new CompletedException(firstPlayerScore > secondPlayerScore);
                 }
                 sets.addLast(new Set());

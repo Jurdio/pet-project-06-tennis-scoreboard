@@ -9,25 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="add TieBreakGame logic">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/GameScore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/FinishedMatchesPersistenceService.java" afterDir="false" />
+    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="fix">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/completed-matches.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/css/completed-matches.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchScoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/NewMatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/NewMatchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/CompletedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/CompletedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/GameScore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Score.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/Set.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/TieBreakGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/TieBreakGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/repository/MatchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/repository/MatchRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchScoreCalculationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchScoreCalculationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/wrapper/IntegerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/wrapper/IntegerWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/edu/tennisscoreboard/service/MatchScoreCalculationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/tennisscoreboard/service/MatchScoreCalculationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/FinishedMatchesPersistenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/FinishedMatchesPersistenceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/match-score.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/match-score.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +28,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTTP Request" />
-        <option value="Jsp File" />
         <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -101,7 +91,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -111,60 +101,13 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dmytro\IdeaProjects\tenis-score-board\src\main\webapp\view" />
+      <recent name="C:\Users\Dmytro\IdeaProjects\tenis-score-board\src\main\resources" />
+      <recent name="C:\Users\Dmytro\IdeaProjects\tenis-score-board\src\main\webapp\view\resources" />
+      <recent name="C:\Users\Dmytro\IdeaProjects\tenis-score-board\src\main\webapp" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.18">
-    <configuration name="test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/src/test/test.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="MatchScoreCalculationServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tenis-score-board" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.tennisscoreboard.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.tennisscoreboard.service" />
-      <option name="MAIN_CLASS_NAME" value="edu.tennisscoreboard.service.MatchScoreCalculationServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MatchScoreCalculationServiceTest.correctCalculationPoints" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tenis-score-board" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.tennisscoreboard.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.tennisscoreboard.service" />
-      <option name="MAIN_CLASS_NAME" value="edu.tennisscoreboard.service.MatchScoreCalculationServiceTest" />
-      <option name="METHOD_NAME" value="correctCalculationPoints" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MatchScoreCalculationServiceTest.firstPlayerWinGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tenis-score-board" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.tennisscoreboard.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.tennisscoreboard.service" />
-      <option name="MAIN_CLASS_NAME" value="edu.tennisscoreboard.service.MatchScoreCalculationServiceTest" />
-      <option name="METHOD_NAME" value="firstPlayerWinGame" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tomcat 10.1.18" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.18" ALTERNATIVE_JRE_ENABLED="false">
+  <component name="RunManager">
+    <configuration name="Tomcat 10.1.18" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.18" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="START_JAVASCRIPT_DEBUGGER" value="true" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -176,7 +119,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="bb4d92ef-575c-4b5f-8111-88c694c2d863" />
+        <option name="BASE_DIRECTORY_NAME" value="e32aba8f-3fcd-4247-9e86-990e023514aa" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -184,7 +127,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="61590" />
+        <option name="DEBUG_PORT" value="50817" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -253,43 +196,6 @@
         </option>
       </method>
     </configuration>
-    <configuration name="Tomcat: tenis-score-board" type="com.poratu.idea.plugins.tomcat" temporary="true">
-      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
-      <predefined_log_file enabled="true" id="Tomcat Access Log" />
-      <predefined_log_file id="Tomcat Catalina Log" />
-      <predefined_log_file id="Tomcat Manager Log" />
-      <predefined_log_file id="Tomcat Host Manager Log" />
-      <option name="contextPath" value="/tenis-score-board" />
-      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="tomcatInfo">
-        <TomcatInfo>
-          <option name="name" value="Apache Tomcat/10.1.18" />
-          <option name="path" value="D:/Tomcat" />
-          <option name="version" value="10.1.18.0" />
-        </TomcatInfo>
-      </option>
-      <module name="tenis-score-board" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="HTTP Request.test | #1" />
-      <item itemvalue="JUnit.MatchScoreCalculationServiceTest" />
-      <item itemvalue="JUnit.MatchScoreCalculationServiceTest.correctCalculationPoints" />
-      <item itemvalue="JUnit.MatchScoreCalculationServiceTest.firstPlayerWinGame" />
-      <item itemvalue="Smart Tomcat.Tomcat: tenis-score-board" />
-      <item itemvalue="Tomcat Server.Tomcat 10.1.18" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Smart Tomcat.Tomcat: tenis-score-board" />
-        <item itemvalue="JUnit.MatchScoreCalculationServiceTest" />
-        <item itemvalue="JUnit.MatchScoreCalculationServiceTest.firstPlayerWinGame" />
-        <item itemvalue="JUnit.MatchScoreCalculationServiceTest.correctCalculationPoints" />
-        <item itemvalue="HTTP Request.test | #1" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -321,7 +227,7 @@
       <workItem from="1707835292644" duration="3267000" />
       <workItem from="1707989105821" duration="8652000" />
       <workItem from="1708076398423" duration="5862000" />
-      <workItem from="1708682019672" duration="2710000" />
+      <workItem from="1708682019672" duration="14372000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -427,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707668247063</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix">
+      <option name="closed" value="true" />
+      <created>1708684948877</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1708684948877</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,9 +380,9 @@
     <MESSAGE value="write correct algo for counting point" />
     <MESSAGE value="add test calcutaion" />
     <MESSAGE value="fix bug with MatchScore name" />
-    <MESSAGE value="fix" />
     <MESSAGE value="add TieBreakGame logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="add TieBreakGame logic" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -477,11 +391,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/Set.java</url>
           <line>12</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/Set.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchScore.java</url>
