@@ -22,19 +22,21 @@ public class MatchScoreController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         OngoingMatch ongoingMatch = ongoingMatchService.getMatch(UUID.fromString(req.getParameter("uuid")));
-        log.debug("Score :{}",ongoingMatch.getMatchScore().getGame().getFirstPlayerScore());
+
+        log.debug("Score :{}", ongoingMatch.getMatchScore().getGame().getFirstPlayerScore());
+
         req.setAttribute("ongoingMatch", ongoingMatch);
-        req.getRequestDispatcher("/view/match-score.jsp").forward(req,resp);
+        req.getRequestDispatcher("/view/match-score.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String uuid = req.getParameter("uuid");
         String value = req.getParameter("value");
+
         log.debug("{}", value);
-        matchScoreCalculationService.addPoint(uuid,value);
 
-
+        matchScoreCalculationService.addPoint(uuid, value);
 
         resp.sendRedirect("match-score?uuid=" + uuid);
     }

@@ -107,4 +107,6 @@ class MatchScoreCalculationServiceTest {
         Assertions.assertEquals("0", matchScore.getGame().getSecondPlayerScore().getValue());
         Assertions.assertEquals("1", matchScore.getSets().getLast().getFirstPlayerScore().getValue());
     }
+
+
 }

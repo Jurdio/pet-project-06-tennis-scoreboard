@@ -1,14 +1,15 @@
-package edu.tenisscoreboard.domain;
+package edu.tenisscoreboard.domain.game;
 
+import edu.tenisscoreboard.domain.CompletedException;
+import edu.tenisscoreboard.domain.game.GameScore;
 import edu.tenisscoreboard.wrapper.IntegerWrapper;
-import jakarta.persistence.criteria.CriteriaBuilder;
-import lombok.Data;
-import lombok.Getter;
 
-@Getter
-public class TieBreakGame extends GameScore<IntegerWrapper>{
-    private final IntegerWrapper firstPlayerScore = new IntegerWrapper(0);
-    private final IntegerWrapper secondPlayerScore = new IntegerWrapper(0);
+public class TieBreakGame extends GameScore<IntegerWrapper> {
+    TieBreakGame(){
+        super();
+        super.firstPlayerScore = new IntegerWrapper(0);
+        super.secondPlayerScore = new IntegerWrapper(0);
+    }
     @Override
     public void addPoint(boolean firstPlayerWin) throws CompletedException {
         if (firstPlayerWin) {

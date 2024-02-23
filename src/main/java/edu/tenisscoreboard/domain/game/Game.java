@@ -1,15 +1,14 @@
-package edu.tenisscoreboard.domain;
+package edu.tenisscoreboard.domain.game;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import edu.tenisscoreboard.domain.CompletedException;
+import edu.tenisscoreboard.domain.Point;
 
-@RequiredArgsConstructor
 public class Game extends GameScore<Point> {
-    private final int diff;
-    @Getter
-    private Point firstPlayerScore = Point.LOVE;
-    @Getter
-    private Point secondPlayerScore = Point.LOVE;
+    public Game(){
+        super();
+        super.firstPlayerScore = Point.LOVE;
+        super.secondPlayerScore = Point.LOVE;
+    }
     @Override
     public void addPoint(boolean firstPlayerWin) throws CompletedException {
         if (firstPlayerScore.ordinal() >= Point.FORTY.ordinal() && secondPlayerScore.ordinal() >= Point.FORTY.ordinal()) {
