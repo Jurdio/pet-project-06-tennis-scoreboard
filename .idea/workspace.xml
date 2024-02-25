@@ -9,15 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="fix">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/completed-matches.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view/css/completed-matches.css" afterDir="false" />
+    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="add match results page">
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchScore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/repository/MatchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/repository/MatchRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/FinishedMatchesPersistenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/FinishedMatchesPersistenceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/completed-matches.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/completed-matches.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/css/completed-matches.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/css/completed-matches.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/css/match-score.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/css/match-score.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/match-score.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/match-score.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/new-match.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/new-match.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +229,9 @@
       <workItem from="1707835292644" duration="3267000" />
       <workItem from="1707989105821" duration="8652000" />
       <workItem from="1708076398423" duration="5862000" />
-      <workItem from="1708682019672" duration="14372000" />
+      <workItem from="1708682019672" duration="18496000" />
+      <workItem from="1708789865921" duration="2425000" />
+      <workItem from="1708878142441" duration="3136000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -341,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708684948877</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add match results page">
+      <option name="closed" value="true" />
+      <created>1708703288539</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1708703288539</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,25 +394,23 @@
     <MESSAGE value="fix bug with MatchScore name" />
     <MESSAGE value="add TieBreakGame logic" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="add match results page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add match results page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/Set.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchScore.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="8" />
+          <line>16</line>
+          <properties field="firstPlayerScore" class="edu.tenisscoreboard.domain.MatchScore" />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchScore.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="9" />
+          <line>17</line>
+          <properties field="secondPlayerScore" class="edu.tenisscoreboard.domain.MatchScore" />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

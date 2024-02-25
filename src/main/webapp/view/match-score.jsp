@@ -33,12 +33,12 @@
                             ${ongoingMatch.matchScore.sets[0].firstPlayerScore.getValue()}
                         </c:if>
                     </div>
-                    <div class="second-set">
+                    <div class="first-set">
                         <c:if test="${ongoingMatch.matchScore.sets[1] ne null}">
                             ${ongoingMatch.matchScore.sets[1].firstPlayerScore.getValue()}
                         </c:if>
                     </div>
-                    <div class="third-set">
+                    <div class="first-set">
                         <c:if test="${ongoingMatch.matchScore.sets[2] ne null}">
                             ${ongoingMatch.matchScore.sets[2].firstPlayerScore.getValue()}
                         </c:if>
@@ -73,12 +73,12 @@
                             ${ongoingMatch.matchScore.sets[0].secondPlayerScore.getValue()}
                         </c:if>
                     </div>
-                    <div class="second-set">
+                    <div class="first-set">
                         <c:if test="${ongoingMatch.matchScore.sets[1] ne null}">
                             ${ongoingMatch.matchScore.sets[1].secondPlayerScore.getValue()}
                         </c:if>
                     </div>
-                    <div class="third-set">
+                    <div class="first-set">
                         <c:if test="${ongoingMatch.matchScore.sets[2] ne null}">
                             ${ongoingMatch.matchScore.sets[2].secondPlayerScore.getValue()}
                         </c:if>
@@ -86,19 +86,64 @@
                 </div>
             </div>
         </div>
-        <div class="button-container">
-            <form method="post">
+        <div class="container">
+            <div class="button-container">
                 <button class="button-game" name="value" value="true">POINT FOR PLAYER 1</button>
-            </form>
-            <button class="button-game">CONTINUE</button>
-            <form method="post">
+                <button class="button-game" onclick="redirectToCompletedMatchesPage()">CONTINUE</button>
                 <button class="button-game" name="value" value="false">POINT FOR PLAYER 2</button>
-            </form>
+            </div>
         </div>
         <div class="matchId-container">
             <h6>MATCH ID : ${ongoingMatch.getId()} </h6>
         </div>
     </div>
 </div>
+<script>
+    function redirectToCompletedMatchesPage() {
+        window.location.href = '${pageContext.request.contextPath}/completed-matches';
+    }
+
+    // Отримуємо елементи, які будемо оновлювати
+    const scoreElement = document.getElementById('score-value');
+
+    // Функція для оновлення даних на сторінці
+    const updateData = (score) => {
+        scoreElement.textContent = score;
+    };
+
+    // Функція для виклику AJAX-запиту
+    const makeAjaxRequest = (value) => {
+        // Ваш код для виклику AJAX-запиту
+        // Використовуйте, наприклад, fetch або XMLHttpRequest
+        // Приклад:
+        fetch(`/your-api-endpoint?value=${value}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            // Додайте тіло запиту, якщо потрібно
+            // body: JSON.stringify({}),
+        })
+            .then(response => response.json())
+            .then(data => {
+                // Після успішного отримання відповіді, оновіть дані на сторінці
+                updateData(data.score);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    };
+
+    // Додаємо обробник подій для кожної кнопки
+    document.getElementById('player1-button').addEventListener('click', () => {
+        makeAjaxRequest(true);
+    });
+
+    document.getElementById('player2-button').addEventListener('click', () => {
+        makeAjaxRequest(false);
+    });
+</script>
+
+
 </body>
 </html>

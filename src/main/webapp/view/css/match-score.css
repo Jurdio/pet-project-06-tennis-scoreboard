@@ -106,9 +106,8 @@ body {
     background-color:  #072432;
 }
 .button-game {
-    width: 15%;
     display: block;
-    margin: 10px auto;
+    margin: 10px;
     padding: 10px 20px;
     color: #fff;
     background-color: #072432;
@@ -126,7 +125,18 @@ body {
 .button-game:active {
     transform: scale(0.95); /* Зменшення розміру при натисканні */
 }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .button-container {
     display: flex;
-
+    justify-content: center;
+    align-items: center;
 }
+
+
+
+
