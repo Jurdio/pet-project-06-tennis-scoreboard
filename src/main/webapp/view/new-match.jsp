@@ -46,10 +46,6 @@
 
         return true;
     }
-    function redirectToMatchScore() {
-        window.location.href = '${pageContext.request.contextPath}/';
-    }
-
     function redirectToMain() {
         window.location.href = '${pageContext.request.contextPath}/';
     }

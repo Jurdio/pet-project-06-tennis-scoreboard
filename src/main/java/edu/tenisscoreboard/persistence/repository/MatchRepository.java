@@ -73,15 +73,34 @@ public class MatchRepository implements CrudRepository<MatchEntity> {
             // Обробка винятку або повідомлення вищестоячому рівню
         }
     }
-    public List<MatchEntity> findWithPagination(int offset, int pageSize){
-        try (Session session = sessionFactory.openSession()){
+
+    public List<MatchEntity> findWithPagination(int offset, int pageSize) {
+        try (Session session = sessionFactory.openSession()) {
             return session.createQuery("FROM MatchEntity", MatchEntity.class)
                     .setFirstResult(offset)
                     .setMaxResults(pageSize)
                     .list();
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return List.of();
+        }
+    }
+
+    public List<MatchEntity> findMatchesWithPaginationByPlayerName(String name, int offset, int pageSize) {
+        try (Session session = sessionFactory.openSession()) {
+            // Ваш SQL-запит для пошуку матчів з пагінацією за ім'ям гравця
+            String sql = "SELECT m FROM MatchEntity m " +
+                    "WHERE m.firstPlayer.name = :playerName OR m.secondPlayer.name = :playerName " +
+                    "ORDER BY m.id";
+
+            return session.createQuery(sql, MatchEntity.class)
+                    .setParameter("playerName", name)
+                    .setFirstResult(offset)
+                    .setMaxResults(pageSize)
+                    .list();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return List.of(); // Повернення пустого списку у випадку помилки
         }
     }
 }

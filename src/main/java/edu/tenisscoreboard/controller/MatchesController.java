@@ -21,23 +21,33 @@ public class MatchesController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String filterName = req.getParameter("filter_by_player_name");
-        int page = req.getParameter("page") == null ? 0 : Integer.parseInt(req.getParameter("page"));
+        int page = req.getParameter("page") == null ? 1 : Integer.parseInt(req.getParameter("page"));
         int pageSize = 5;
 
-        // Отримати список матчів від сервісу, враховуючи фільтрацію
+        // Отримати кількість всіх матчів (без пагінації) для визначення загальної кількості сторінок
+        int totalMatches = finishedMatchesPersistenceService.getAllMatches().size();
+
+        // Визначити загальну кількість сторінок
+        int totalPages = (int) Math.ceil((double) totalMatches / pageSize);
+
+        // Встановити правильний offset в залежності від обраної сторінки
+        int offset = (page - 1) * pageSize;
+
+        // Отримати список матчів від сервісу, враховуючи фільтрацію та пагінацію
         List<Match> listOfMatches = List.of();
         if (filterName != null && !filterName.isEmpty()) {
-            //listOfMatches = finishedMatchesPersistenceService.getMatchesWithFilter(filterName, page, pageSize);
+            listOfMatches = finishedMatchesPersistenceService.getMatchesWithPaginationByPlayerName(filterName, offset, pageSize);
         } else {
-            listOfMatches = finishedMatchesPersistenceService.getAllMatches();
+            listOfMatches = finishedMatchesPersistenceService.getMatchesWithPagination(offset, pageSize);
         }
-        System.out.println(listOfMatches);
-        System.out.println(finishedMatchesPersistenceService.getAllMatches());
 
-        // Передати список матчів як атрибут для виведення в JSP
+        // Передати список матчів, кількість сторінок і поточну сторінку як атрибути для виведення в JSP
         req.setAttribute("listOfMatches", listOfMatches);
+        req.setAttribute("totalPages", totalPages);
+        req.setAttribute("currentPage", page);
 
         // Перенаправлення на JSP-сторінку
         req.getRequestDispatcher("/view/completed-matches.jsp").forward(req, resp);
     }
-}
+    }
+

@@ -37,4 +37,12 @@ public class FinishedMatchesPersistenceService {
                 .map(matchMapper::toMatch)
                 .collect(Collectors.toList());
     }
+    public List<Match> getMatchesWithPaginationByPlayerName(String name, int page, int pageSize){
+        int offset = page * pageSize;
+        List<MatchEntity> matchEntities = matchRepository.findMatchesWithPaginationByPlayerName(name, offset, pageSize);
+
+        return matchEntities.stream()
+                .map(matchMapper::toMatch)
+                .collect(Collectors.toList());
+    }
 }

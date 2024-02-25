@@ -17,7 +17,8 @@
     <form action="${pageContext.request.contextPath}/completed-matches" method="get">
         <label for="playerName">Filter by Player Name:</label>
         <input type="text" id="playerName" name="filter_by_player_name">
-        <input type="submit" value="Filter">
+        <input type="submit" value="Search">
+        <input type="submit" value="Reset">
     </form>
 
     <ul class="match-list">
@@ -28,7 +29,7 @@
                         ${match.getFirstPlayer().getName()}
                     <div class="winner">
                         <c:if test="${not empty match.getWinner() and match.getWinner().equals(match.getFirstPlayer())}">
-                            <img src="<%=request.getContextPath()%>/view/cup-600-600.png" alt="Trophy" width="20" height="20">
+                            <img src="<%=request.getContextPath()%>/view/cup-600-600.png" alt="Trophy" class="trophy-icon">
                         </c:if>
                     </div>
                 </div>
@@ -36,7 +37,7 @@
                         ${match.getSecondPlayer().getName()}
                     <div class="winner">
                         <c:if test="${not empty match.getWinner() and match.getWinner().equals(match.getSecondPlayer())}">
-                            <img src="<%=request.getContextPath()%>/view/cup-600-600.png" alt="Trophy" width="20" height="20">
+                            <img src="<%=request.getContextPath()%>/view/cup-600-600.png" alt="Trophy" class="trophy-icon">
                         </c:if>
                     </div>
                 </div>
