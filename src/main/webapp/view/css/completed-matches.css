@@ -1,26 +1,64 @@
-.match-list{
+.match-list {
     list-style-type: none;
     padding: 0;
+    border-radius: 10px; /* Змініть значення на ваш вибір */
+    overflow: hidden;
 }
+
 .match-item {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-
-    padding: 10px;
-    margin-bottom: 10px;
 }
-.player-info {
-    display: flex;
-    align-items: center;
-    text-align: center; /* Центрування тексту */
-    flex: 1; /* Займає весь доступний простір */
+
+.match-list li {
+    border-radius: 10px; /* Змініть значення на ваш вибір */
+    overflow: hidden;
+    height: 35px;
+}
+
+/* Застосовуємо стиль до непарних елементів списку */
+.match-list li:nth-child(odd) {
+    background-color: #264C59; /* Змініть колір фону на ваш вибір */
+}
+
+/* Застосовуємо стиль до парних елементів списку (необов'язково) */
+.match-list li:nth-child(even) {
+    background-color: #203e47; /* Змініть колір фону на ваш вибір */
 }
 
 .trophy-icon {
     width: 20px;
     height: 20px;
 }
-.winner{
+
+.winner {
+    width: 25px;
+    height: 25px;
     margin-left: 20px;
+    margin-right: 20px;
+}
+
+.left-half {
+    width: 45%;
+    display: flex;
+    justify-content: flex-end; /* Вирівнюємо елементи вправо */
+    align-items: center; /* Центруємо елементи вздовж поперекової осі */
+}
+
+.right-half {
+    width: 45%;
+    display: flex;
+    justify-content: start; /* Вирівнюємо елементи вправо */
+    align-items: center; /* Центруємо елементи вздовж поперекової осі */
+}
+
+.second-player {
+    margin-left: 65px;
+}
+.pagination-section{
+    display: flex;
+    justify-content: center ; /* Вирівнюємо елементи вправо */
+    align-items: center;
+
 }

@@ -31,7 +31,7 @@ public class MatchesController extends HttpServlet {
         int totalPages = (int) Math.ceil((double) totalMatches / pageSize);
 
         // Встановити правильний offset в залежності від обраної сторінки
-        int offset = (page - 1) * pageSize;
+        int offset = page + pageSize;
 
         // Отримати список матчів від сервісу, враховуючи фільтрацію та пагінацію
         List<Match> listOfMatches = List.of();
