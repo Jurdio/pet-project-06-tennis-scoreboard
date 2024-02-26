@@ -29,7 +29,7 @@
                         ${match.getFirstPlayer().getName()}
                     <div class="winner">
                         <c:if test="${not empty match.getWinner() and match.getWinner().equals(match.getFirstPlayer())}">
-                            <img src="<%=request.getContextPath()%>/view/cup-600-600.png" alt="Trophy" class="trophy-icon">
+                            <img src="<%=request.getContextPath()%>/view/img/cup-600-600.png" alt="Trophy" class="trophy-icon">
                         </c:if>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                         ${match.getSecondPlayer().getName()}
                     <div class="winner">
                         <c:if test="${not empty match.getWinner() and match.getWinner().equals(match.getSecondPlayer())}">
-                            <img src="<%=request.getContextPath()%>/view/cup-600-600.png" alt="Trophy" class="trophy-icon">
+                            <img src="<%=request.getContextPath()%>/view/img/cup-600-600.png" alt="Trophy" class="trophy-icon">
                         </c:if>
                     </div>
                 </div>

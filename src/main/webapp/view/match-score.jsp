@@ -10,35 +10,49 @@
 </head>
 <body>
 <header>
-    <h1>ONGOING MATCH</h1>
+    <c:choose>
+        <c:when test="${ongoingMatch.getWinner() eq null}">
+            <h1>ONGOING MATCH</h1>
+        </c:when>
+        <c:otherwise>
+            <h1>MATCH ENDED</h1>
+        </c:otherwise>
+    </c:choose>
 </header>
 <div class="main-container">
     <div class="border-container">
         <div class="gameplay-container">
             <div class="info-container">
+
                 <div class="player-name-container">
+                    <c:if test="${ongoingMatch.getWinner().equals(ongoingMatch.getFirstPlayer())}">
+                        <img src="<%=request.getContextPath()%>/view/img/cup-600-600.png" alt="Trophy" class="trophy-icon">
+                    </c:if>
+
                     <h2>${ongoingMatch.getFirstPlayer().getName()}</h2>
+
                 </div>
+
                 <div class="gameplay-info-container">
                     <div class="serve-container">
-                        <c:if test="${ongoingMatch.getFirstPlayer().getId() == ongoingMatch.getServing()}">
+                        <c:if test="${ongoingMatch.isServing()}">
                             <div class="serve-point"></div>
                         </c:if>
                     </div>
                     <div class="game-container">
                         <span>${requestScope.ongoingMatch.getMatchScore().getGame().getFirstPlayerScore().getValue()}</span>
                     </div>
-                    <div class="first-set">
+                    <div class="first-set" id="set1-player1">
                         <c:if test="${ongoingMatch.matchScore.sets[0] ne null}">
                             ${ongoingMatch.matchScore.sets[0].firstPlayerScore.getValue()}
                         </c:if>
                     </div>
-                    <div class="first-set">
+                    <div class="second-set" id="set2-player1">
                         <c:if test="${ongoingMatch.matchScore.sets[1] ne null}">
                             ${ongoingMatch.matchScore.sets[1].firstPlayerScore.getValue()}
                         </c:if>
                     </div>
-                    <div class="first-set">
+                    <div class="third-set" id="set3-player1">
                         <c:if test="${ongoingMatch.matchScore.sets[2] ne null}">
                             ${ongoingMatch.matchScore.sets[2].firstPlayerScore.getValue()}
                         </c:if>
@@ -57,28 +71,33 @@
             </div>
             <div class="info-container">
                 <div class="player-name-container">
+                    <c:if test="${ongoingMatch.getWinner().equals(ongoingMatch.getSecondPlayer())}">
+                        <img src="<%=request.getContextPath()%>/view/img/cup-600-600.png" alt="Trophy" class="trophy-icon">
+                    </c:if>
                     <h2>${ongoingMatch.getSecondPlayer().getName()}</h2>
+                </div>
+                <div class="winner">
                 </div>
                 <div class="gameplay-info-container">
                     <div class="serve-container">
-                        <c:if test="${ongoingMatch.getSecondPlayer().getId() == ongoingMatch.getServing()}">
+                        <c:if test="${!ongoingMatch.isServing()}">
                             <div class="serve-point"></div>
                         </c:if>
                     </div>
                     <div class="game-container">
                         <span>${ongoingMatch.getMatchScore().getGame().getSecondPlayerScore().getValue()}</span>
                     </div>
-                    <div class="first-set">
+                    <div class="first-set" id="set1-player2">
                         <c:if test="${ongoingMatch.matchScore.sets[0] ne null}">
                             ${ongoingMatch.matchScore.sets[0].secondPlayerScore.getValue()}
                         </c:if>
                     </div>
-                    <div class="first-set">
+                    <div class="second-set" id="set2-player2">
                         <c:if test="${ongoingMatch.matchScore.sets[1] ne null}">
                             ${ongoingMatch.matchScore.sets[1].secondPlayerScore.getValue()}
                         </c:if>
                     </div>
-                    <div class="first-set">
+                    <div class="third-set" id="set3-player2">
                         <c:if test="${ongoingMatch.matchScore.sets[2] ne null}">
                             ${ongoingMatch.matchScore.sets[2].secondPlayerScore.getValue()}
                         </c:if>
@@ -88,61 +107,28 @@
         </div>
         <div class="container">
             <div class="button-container">
-                <button class="button-game" name="value" value="true">POINT FOR PLAYER 1</button>
-                <button class="button-game" onclick="redirectToCompletedMatchesPage()">CONTINUE</button>
-                <button class="button-game" name="value" value="false">POINT FOR PLAYER 2</button>
+                <form method="post">
+                    <button class="button-game" type="submit" name="value" value="true"
+                            <c:if test="${ongoingMatch.getWinner() ne null}">disabled</c:if>>POINT FOR PLAYER 1
+                    </button>
+                </form>
+                <form action='${pageContext.request.contextPath}/completed-matches'>
+                    <button class="button-game">CONTINUE</button>
+                </form>
+                <form method="post">
+                    <button class="button-game" type="submit" name="value" value="false"
+                            <c:if test="${ongoingMatch.getWinner() ne null}">disabled</c:if>>POINT FOR PLAYER 2
+                    </button>
+                </form>
             </div>
         </div>
+
+
         <div class="matchId-container">
             <h6>MATCH ID : ${ongoingMatch.getId()} </h6>
         </div>
     </div>
 </div>
-<script>
-    function redirectToCompletedMatchesPage() {
-        window.location.href = '${pageContext.request.contextPath}/completed-matches';
-    }
-
-    // Отримуємо елементи, які будемо оновлювати
-    const scoreElement = document.getElementById('score-value');
-
-    // Функція для оновлення даних на сторінці
-    const updateData = (score) => {
-        scoreElement.textContent = score;
-    };
-
-    // Функція для виклику AJAX-запиту
-    const makeAjaxRequest = (value) => {
-        // Ваш код для виклику AJAX-запиту
-        // Використовуйте, наприклад, fetch або XMLHttpRequest
-        // Приклад:
-        fetch(`/your-api-endpoint?value=${value}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            // Додайте тіло запиту, якщо потрібно
-            // body: JSON.stringify({}),
-        })
-            .then(response => response.json())
-            .then(data => {
-                // Після успішного отримання відповіді, оновіть дані на сторінці
-                updateData(data.score);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-    };
-
-    // Додаємо обробник подій для кожної кнопки
-    document.getElementById('player1-button').addEventListener('click', () => {
-        makeAjaxRequest(true);
-    });
-
-    document.getElementById('player2-button').addEventListener('click', () => {
-        makeAjaxRequest(false);
-    });
-</script>
 
 
 </body>
