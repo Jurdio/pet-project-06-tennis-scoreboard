@@ -1,9 +1,14 @@
 package edu.tenisscoreboard.persistence.entity;
 
+import edu.tenisscoreboard.domain.Match;
+import edu.tenisscoreboard.domain.Point;
+import edu.tenisscoreboard.domain.game.Set;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+
+import java.util.List;
 
 @Entity
 @Data
@@ -27,5 +32,6 @@ public class MatchEntity {
     @ManyToOne
     @JoinColumn(name = "winner", referencedColumnName = "id")
     private PlayerEntity winner;
+
 }
 

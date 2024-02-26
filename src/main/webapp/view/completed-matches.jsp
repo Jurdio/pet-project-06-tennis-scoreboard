@@ -21,29 +21,48 @@
         <input type="submit" value="Reset">
     </form>
 
+
     <ul class="match-list">
         <%-- Перебираємо матчі та виводимо їх у список --%>
         <c:forEach var="match" items="${requestScope.listOfMatches}">
             <li class="match-item">
-                <div class="player-info first-player">
-                        ${match.getFirstPlayer().getName()}
+                <div class="left-half">
+                    <div class="first-player">
+                            ${match.getFirstPlayer().getName()}
+                    </div>
                     <div class="winner">
                         <c:if test="${not empty match.getWinner() and match.getWinner().equals(match.getFirstPlayer())}">
-                            <img src="<%=request.getContextPath()%>/view/img/cup-600-600.png" alt="Trophy" class="trophy-icon">
+                            <img src="<%=request.getContextPath()%>/view/img/cup-600-600.png" alt="Trophy"
+                                 class="trophy-icon">
                         </c:if>
                     </div>
                 </div>
-                <div class="player-info second-player">
-                        ${match.getSecondPlayer().getName()}
+                <div>VS</div>
+                <div class="right-half">
+                    <div class="second-player">
+                            ${match.getSecondPlayer().getName()}
+                    </div>
                     <div class="winner">
                         <c:if test="${not empty match.getWinner() and match.getWinner().equals(match.getSecondPlayer())}">
-                            <img src="<%=request.getContextPath()%>/view/img/cup-600-600.png" alt="Trophy" class="trophy-icon">
+                            <img src="<%=request.getContextPath()%>/view/img/cup-600-600.png" alt="Trophy"
+                                 class="trophy-icon">
                         </c:if>
                     </div>
                 </div>
             </li>
         </c:forEach>
     </ul>
+    <div class="pagination-section">
+        <c:if test="${currentPage > 1}">
+            <a href="${pageContext.request.contextPath}/completed-matches?page=${requestScope.currentPage - 1}"><</a>
+        </c:if>
+        <span>${currentPage}</span>
+        <c:if test="${currentPage < totalPages}">
+            <a href="${pageContext.request.contextPath}/completed-matches?page=${requestScope.currentPage + 1}">></a>
+        </c:if>
+
+
+    </div>
 </div>
 </body>
 </html>

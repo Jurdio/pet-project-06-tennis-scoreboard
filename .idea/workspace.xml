@@ -9,17 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="write front">
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="add disable buton when match end and small fix with front and back">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/OngoingMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/OngoingMatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchScoreCalculationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchScoreCalculationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/OngoingMatchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/OngoingMatchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/entity/MatchEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/entity/MatchEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/completed-matches.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/completed-matches.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/view/css/completed-matches.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/css/completed-matches.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/css/match-score.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/css/match-score.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/match-score.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/match-score.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +228,7 @@
       <workItem from="1708789865921" duration="2425000" />
       <workItem from="1708878142441" duration="5987000" />
       <workItem from="1708952366657" duration="6951000" />
-      <workItem from="1708960443346" duration="3643000" />
+      <workItem from="1708960443346" duration="9235000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -364,7 +358,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708881290848</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add disable buton when match end and small fix with front and back">
+      <option name="closed" value="true" />
+      <created>1708964148252</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1708964148252</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add disable buton when match end and small fix with front and back">
+      <option name="closed" value="true" />
+      <created>1708964154216</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1708964154216</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,6 +417,7 @@
     <MESSAGE value="fix" />
     <MESSAGE value="add match results page" />
     <MESSAGE value="write front" />
-    <option name="LAST_COMMIT_MESSAGE" value="write front" />
+    <MESSAGE value="add disable buton when match end and small fix with front and back" />
+    <option name="LAST_COMMIT_MESSAGE" value="add disable buton when match end and small fix with front and back" />
   </component>
 </project>
