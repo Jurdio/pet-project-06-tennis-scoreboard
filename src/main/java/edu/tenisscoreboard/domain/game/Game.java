@@ -65,6 +65,9 @@ public class Game extends GameScore<Point> {
     }
 
     void throwMatch() throws CompletedException {
-        throw new CompletedException(firstPlayerScore.ordinal() > secondPlayerScore.ordinal());
+        boolean result = firstPlayerScore.ordinal() > secondPlayerScore.ordinal();
+        firstPlayerScore = Point.LOVE;
+        secondPlayerScore = Point.LOVE;
+        throw new CompletedException(result);
     }
 }

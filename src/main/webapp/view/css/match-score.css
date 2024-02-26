@@ -1,3 +1,6 @@
+@import url('https://fonts.cdnfonts.com/css/ds-digital');
+@import url('https://fonts.cdnfonts.com/css/seven-segment');
+
 header {
     background-color: #264C59; /* колір хедера */
     color: #FCFFF9; /* колір тексту в хедері */
@@ -6,7 +9,6 @@ header {
 }
 
 body {
-    font-family: 'Arial', sans-serif; /* Встановлюємо шрифт для всієї сторінки */
     color: #FCFFF9; /* колір тексту в хедері */
 }
 .main-container {
@@ -58,7 +60,10 @@ body {
 .gameplay-text-container > div{
     margin-left: 3%;
 }
-.player-name-container{
+.player-name-container {
+    display: flex;
+    justify-content: flex-end; /* Вирівнюємо елементи вправо */
+    align-items: center; /* Центруємо елементи вздовж поперекової осі */
     width: 40%;
     text-align: right;
 }
@@ -82,7 +87,10 @@ body {
     background-color:  #072432;
 }
 .game-container span {
-    font-size: 45px;
+    font-family: 'DS-Digital', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: #CF3C2B;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,18 +100,28 @@ body {
     height: 50px;
     width: 35px;
     background-color:  #072432;
-    font-size: 45px;
+    font-family: 'DS-Digital', sans-serif;
+    font-size: 50px;
+    color: #FBB53A;
     text-align: center;
 }
 .second-set{
     height: 50px;
-    width: 35px;
+    width: 40px;
     background-color:  #072432;
+    font-family: 'DS-Digital', sans-serif;
+    color: #FBB53A;
+    font-size: 50px;
+    text-align: center;
 }
 .third-set{
     height: 50px;
     width: 35px;
     background-color:  #072432;
+    font-family: 'DS-Digital', sans-serif;
+    color: #FBB53A;
+    font-size: 50px;
+    text-align: center;
 }
 .button-game {
     display: block;
@@ -136,7 +154,18 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.button-game[disabled] {
+    /* Стиль для вимкнутих кнопок */
+    background-color: lightgray;
+    color: darkgray;
+    cursor: not-allowed;
+}
+.trophy-icon {
+    /* Додайте стилі для іконки трофею за потреби */
+    width: 25px;
+    height: 25px;
+    margin-right: 10px; /* Додайте відступ між іконкою та текстом */
+}
 
 
 

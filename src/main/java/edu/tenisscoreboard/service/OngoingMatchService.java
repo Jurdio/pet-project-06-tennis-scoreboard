@@ -36,10 +36,10 @@ public class OngoingMatchService {
                 .id(id)
                 .firstPlayer(firstPlayer)
                 .secondPlayer(secondPlayer)
-                .serving(new Random().nextInt(2) == 0 ? firstPlayer.getId() : secondPlayer.getId())
+                .serving(new Random().nextBoolean())
                 .matchScore(new MatchScore())
                 .build();
-        log.debug("{}",ongoingMatch.getServing());
+
 
         ongoingMatches.put(id, ongoingMatch);
 
