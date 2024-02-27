@@ -15,30 +15,34 @@ public class FinishedMatchesPersistenceService {
     private final MatchRepository matchRepository = new MatchRepository();
     private final MatchMapper matchMapper = Mappers.getMapper(MatchMapper.class);
 
-    public void saveMatch(Match match){
+    public void saveMatch(Match match) {
         matchRepository.save(matchMapper.toMatchEntity(match));
     }
-    public Match getMatchById(int id){
+
+    public Match getMatchById(int id) {
         return matchMapper.toMatch(matchRepository.findById(id).orElseThrow());
     }
-    public List<Match> getAllMatches(){
+
+    public List<Match> getAllMatches() {
         List<MatchEntity> matchEntities = matchRepository.findAll();
-        log.debug("List of entity {}:",matchEntities);
+        log.debug("List of entity {}:", matchEntities);
 
         return matchEntities.stream()
                 .map(matchMapper::toMatch)
                 .collect(Collectors.toList());
     }
-    public List<Match> getMatchesWithPagination (int page, int pageSize){
-        int offset = (page) * pageSize;
-        List<MatchEntity> matchEntities = matchRepository.findWithPagination(offset,pageSize);
+
+    public List<Match> getMatchesWithPagination(int currentPage, int pageSize) {
+        int offset = (currentPage - 1) * pageSize;
+        List<MatchEntity> matchEntities = matchRepository.findWithPagination(offset, pageSize);
 
         return matchEntities.stream()
                 .map(matchMapper::toMatch)
                 .collect(Collectors.toList());
     }
-    public List<Match> getMatchesWithPaginationByPlayerName(String name, int page, int pageSize){
-        int offset = page * pageSize;
+
+    public List<Match> getMatchesWithPaginationByPlayerName(String name, int currentPage, int pageSize) {
+        int offset = (currentPage - 1) * pageSize;
         List<MatchEntity> matchEntities = matchRepository.findMatchesWithPaginationByPlayerName(name, offset, pageSize);
 
         return matchEntities.stream()

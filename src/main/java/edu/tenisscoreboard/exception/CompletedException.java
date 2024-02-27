@@ -1,4 +1,4 @@
-package edu.tenisscoreboard.domain;
+package edu.tenisscoreboard.exception;
 
 import lombok.RequiredArgsConstructor;
 

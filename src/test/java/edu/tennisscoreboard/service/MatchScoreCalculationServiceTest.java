@@ -1,6 +1,6 @@
 package edu.tennisscoreboard.service;
 
-import edu.tenisscoreboard.domain.MatchScore;
+import edu.tenisscoreboard.domain.score.MatchScore;
 import edu.tenisscoreboard.domain.Player;
 import edu.tenisscoreboard.service.MatchScoreCalculationService;
 import edu.tenisscoreboard.service.OngoingMatchService;

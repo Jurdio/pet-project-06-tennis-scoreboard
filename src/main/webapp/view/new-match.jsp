@@ -20,7 +20,8 @@
 </header>
 <div class="main-container">
     <div class="input-container">
-        <form class="form-container" action="${pageContext.request.contextPath}/new-match" method="post" onsubmit="return validateForm()" accept-charset="UTF-8">
+        <form class="form-container" action="${pageContext.request.contextPath}/new-match" method="post"
+              onsubmit="return validateForm()" accept-charset="UTF-8">
             <label for="player1">Player 1:</label>
             <input type="text" name="player1" id="player1"><br>
             <label for="player2">Player 2:</label>
@@ -46,6 +47,7 @@
 
         return true;
     }
+
     function redirectToMain() {
         window.location.href = '${pageContext.request.contextPath}/';
     }

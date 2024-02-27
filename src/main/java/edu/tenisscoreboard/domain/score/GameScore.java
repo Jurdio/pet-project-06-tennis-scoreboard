@@ -1,7 +1,5 @@
-package edu.tenisscoreboard.domain.game;
+package edu.tenisscoreboard.domain.score;
 
-import edu.tenisscoreboard.domain.ScoreValueProvider;
-import edu.tenisscoreboard.domain.Scoring;
 import lombok.Getter;
 
 @Getter

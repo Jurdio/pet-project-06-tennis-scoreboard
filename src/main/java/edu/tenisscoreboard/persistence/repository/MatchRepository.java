@@ -18,7 +18,6 @@ public class MatchRepository implements CrudRepository<MatchEntity> {
         try (Session session = sessionFactory.openSession()) {
             return Optional.ofNullable(session.get(MatchEntity.class, id));
         } catch (Exception e) {
-            // Обробляйте винятки або повідомляйте вищестоячому рівню
             e.printStackTrace();
         }
         return Optional.empty();
@@ -30,7 +29,7 @@ public class MatchRepository implements CrudRepository<MatchEntity> {
             return session.createQuery("FROM MatchEntity", MatchEntity.class).list();
         } catch (Exception e) {
             e.printStackTrace();
-            return List.of(); // Повернення пустого списку у випадку помилки
+            return List.of();
         }
     }
 
@@ -42,7 +41,7 @@ public class MatchRepository implements CrudRepository<MatchEntity> {
             transaction.commit();
         } catch (Exception e) {
             e.printStackTrace();
-            // Обробка винятку або повідомлення вищестоячому рівню
+
         }
         return entity;
     }
@@ -55,7 +54,7 @@ public class MatchRepository implements CrudRepository<MatchEntity> {
             transaction.commit();
         } catch (Exception e) {
             e.printStackTrace();
-            // Обробка винятку або повідомлення вищестоячому рівню
+
         }
     }
 
@@ -70,7 +69,7 @@ public class MatchRepository implements CrudRepository<MatchEntity> {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            // Обробка винятку або повідомлення вищестоячому рівню
+
         }
     }
 
@@ -100,7 +99,7 @@ public class MatchRepository implements CrudRepository<MatchEntity> {
                     .list();
         } catch (Exception e) {
             e.printStackTrace();
-            return List.of(); // Повернення пустого списку у випадку помилки
+            return List.of();
         }
     }
 }

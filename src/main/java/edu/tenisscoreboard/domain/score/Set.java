@@ -1,7 +1,7 @@
-package edu.tenisscoreboard.domain.game;
+package edu.tenisscoreboard.domain.score;
 
-import edu.tenisscoreboard.domain.CompletedException;
-import edu.tenisscoreboard.wrapper.IntegerWrapper;
+import edu.tenisscoreboard.exception.CompletedException;
+import edu.tenisscoreboard.util.wrapper.IntegerWrapper;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
@@ -21,7 +21,6 @@ public class Set extends GameScore<IntegerWrapper> {
         } else {
             secondPlayerScore.add(1);
         }
-
 
 
         if (Math.abs(firstPlayerScore.getInteger() - secondPlayerScore.getInteger()) >= 2 && (firstPlayerScore.getInteger() >= 6 || secondPlayerScore.getInteger() >= 6)) {
