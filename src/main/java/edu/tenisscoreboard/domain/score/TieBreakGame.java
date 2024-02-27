@@ -1,8 +1,7 @@
-package edu.tenisscoreboard.domain.game;
+package edu.tenisscoreboard.domain.score;
 
-import edu.tenisscoreboard.domain.CompletedException;
-import edu.tenisscoreboard.domain.game.GameScore;
-import edu.tenisscoreboard.wrapper.IntegerWrapper;
+import edu.tenisscoreboard.exception.CompletedException;
+import edu.tenisscoreboard.util.wrapper.IntegerWrapper;
 
 public class TieBreakGame extends GameScore<IntegerWrapper> {
     TieBreakGame(){

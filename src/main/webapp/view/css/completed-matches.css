@@ -56,9 +56,42 @@
 .second-player {
     margin-left: 65px;
 }
-.pagination-section{
+
+.pagination-section {
     display: flex;
-    justify-content: center ; /* Вирівнюємо елементи вправо */
+    justify-content: center; /* Вирівнюємо елементи вправо */
     align-items: center;
 
+}
+.pagination-section a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-section a:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination-section span {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.pagination-section a.disabled {
+    pointer-events: none;
+    color: #999;
+    border-color: #999;
+    background-color: #f0f0f0;
 }

@@ -26,7 +26,8 @@
 
                 <div class="player-name-container">
                     <c:if test="${ongoingMatch.getWinner().equals(ongoingMatch.getFirstPlayer())}">
-                        <img src="<%=request.getContextPath()%>/view/img/cup-600-600.png" alt="Trophy" class="trophy-icon">
+                        <img src="<%=request.getContextPath()%>/view/img/cup-600-600.png" alt="Trophy"
+                             class="trophy-icon">
                     </c:if>
 
                     <h2>${ongoingMatch.getFirstPlayer().getName()}</h2>
@@ -72,7 +73,8 @@
             <div class="info-container">
                 <div class="player-name-container">
                     <c:if test="${ongoingMatch.getWinner().equals(ongoingMatch.getSecondPlayer())}">
-                        <img src="<%=request.getContextPath()%>/view/img/cup-600-600.png" alt="Trophy" class="trophy-icon">
+                        <img src="<%=request.getContextPath()%>/view/img/cup-600-600.png" alt="Trophy"
+                             class="trophy-icon">
                     </c:if>
                     <h2>${ongoingMatch.getSecondPlayer().getName()}</h2>
                 </div>

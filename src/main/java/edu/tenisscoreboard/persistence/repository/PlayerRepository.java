@@ -1,6 +1,5 @@
 package edu.tenisscoreboard.persistence.repository;
 
-import edu.tenisscoreboard.persistence.entity.MatchEntity;
 import edu.tenisscoreboard.persistence.entity.PlayerEntity;
 import edu.tenisscoreboard.util.HibernateUtil;
 import org.hibernate.Session;
@@ -13,13 +12,15 @@ import java.util.Optional;
 
 public class PlayerRepository implements CrudRepository<PlayerEntity> {
     private final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+
     @Override
     public Optional<PlayerEntity> findById(int id) {
-        try (Session session = sessionFactory.openSession()){
-            return Optional.ofNullable(session.get(PlayerEntity.class,id));
+        try (Session session = sessionFactory.openSession()) {
+            return Optional.ofNullable(session.get(PlayerEntity.class, id));
         }
     }
-    public Optional<PlayerEntity> findByName(String name){
+
+    public Optional<PlayerEntity> findByName(String name) {
         try (Session session = sessionFactory.openSession()) {
             String hql = "FROM PlayerEntity WHERE name = :playerName";
             Query<PlayerEntity> query = session.createQuery(hql, PlayerEntity.class);
@@ -28,7 +29,6 @@ public class PlayerRepository implements CrudRepository<PlayerEntity> {
             PlayerEntity player = query.uniqueResult();
             return Optional.ofNullable(player);
         } catch (Exception e) {
-            // Обробка винятків, якщо потрібно
             e.printStackTrace();
             return Optional.empty();
         }
@@ -48,7 +48,7 @@ public class PlayerRepository implements CrudRepository<PlayerEntity> {
             session.save(entity);
             transaction.commit();
         }
-        return entity; // Повертаємо збережений об'єкт
+        return entity;
     }
 
     @Override

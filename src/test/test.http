@@ -1,7 +1,0 @@
-POST http://localhost:8080/tenis_score_board_war_exploded/all
-Content-Type: application/json
-
-{
-  "player-1": 12,
-  "player-2": 25
-}

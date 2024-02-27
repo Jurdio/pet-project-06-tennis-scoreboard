@@ -1,8 +1,8 @@
 package edu.tenisscoreboard.service;
 
-import edu.tenisscoreboard.domain.CompletedException;
 import edu.tenisscoreboard.domain.Match;
 import edu.tenisscoreboard.domain.OngoingMatch;
+import edu.tenisscoreboard.exception.CompletedException;
 
 import java.util.UUID;
 

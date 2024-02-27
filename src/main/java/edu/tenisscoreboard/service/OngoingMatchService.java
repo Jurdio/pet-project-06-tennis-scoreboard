@@ -1,8 +1,8 @@
 package edu.tenisscoreboard.service;
 
-import edu.tenisscoreboard.domain.MatchScore;
 import edu.tenisscoreboard.domain.OngoingMatch;
 import edu.tenisscoreboard.domain.Player;
+import edu.tenisscoreboard.domain.score.MatchScore;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
@@ -16,7 +16,8 @@ import java.util.concurrent.ConcurrentHashMap;
 @Slf4j
 public class OngoingMatchService {
     private static volatile OngoingMatchService INSTANCE;
-    private final Map<UUID, OngoingMatch> ongoingMatches = new ConcurrentHashMap<>();;
+    private final Map<UUID, OngoingMatch> ongoingMatches = new ConcurrentHashMap<>();
+    ;
 
     public static OngoingMatchService getInstance() {
         if (INSTANCE == null) {
@@ -46,7 +47,7 @@ public class OngoingMatchService {
         return id;
     }
 
-    public OngoingMatch getMatch (UUID id){
+    public OngoingMatch getMatch(UUID id) {
         return ongoingMatches.get(id);
     }
 

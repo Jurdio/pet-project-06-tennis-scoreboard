@@ -1,8 +1,6 @@
-package edu.tenisscoreboard.domain;
+package edu.tenisscoreboard.domain.score;
 
-import edu.tenisscoreboard.domain.game.Game;
-import edu.tenisscoreboard.domain.game.GameScore;
-import edu.tenisscoreboard.domain.game.Set;
+import edu.tenisscoreboard.exception.CompletedException;
 import lombok.Data;
 
 import java.util.LinkedList;
@@ -36,6 +34,7 @@ public class MatchScore {
             try {
                 sets.getLast().addPoint(gameCompleted.firstPlayerWin);
             } catch (CompletedException setCompleted) {
+
                 if (setCompleted.firstPlayerWin) {
                     firstPlayerScore++;
                 } else {
@@ -45,6 +44,7 @@ public class MatchScore {
                 if (firstPlayerScore == 2 || secondPlayerScore == 2) {
                     throw new CompletedException(firstPlayerScore > secondPlayerScore);
                 }
+
                 sets.addLast(new Set());
             }
             game = sets.getLast().createGame();
