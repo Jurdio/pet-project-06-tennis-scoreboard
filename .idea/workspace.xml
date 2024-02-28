@@ -9,39 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="add disable buton when match end and small fix with front and back">
+    <list default="true" id="23b372c2-29ce-407e-afd0-5c77a0807149" name="Changes" comment="add init sql">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/HelloServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/MatchesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/CompletedMatchesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/NewMatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/controller/NewMatchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/CompletedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/exception/CompletedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/MatchScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/score/MatchScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/OngoingMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/OngoingMatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/score/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/ScoreValueProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/score/ScoreValueProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/Scoring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/score/Scoring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/score/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/GameScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/score/GameScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/score/Set.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/game/TieBreakGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/domain/score/TieBreakGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/filter/EncodingFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/entity/MatchEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/entity/MatchEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/repository/MatchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/repository/MatchRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/repository/PlayerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/persistence/repository/PlayerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/FinishedMatchesPersistenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/FinishedMatchesPersistenceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchScoreCalculationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchScoreCalculationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/MatchService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/OngoingMatchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/OngoingMatchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/service/PlayerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/wrapper/IntegerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tenisscoreboard/util/wrapper/IntegerWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/css/completed-matches.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/css/completed-matches.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/css/match-score.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/css/match-score.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/img/trophy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/match-score.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/match-score.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/new-match.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/new-match.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/edu/tennisscoreboard/service/MatchScoreCalculationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/tennisscoreboard/service/MatchScoreCalculationServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/test.http" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +226,7 @@
       <workItem from="1708878142441" duration="5987000" />
       <workItem from="1708952366657" duration="6951000" />
       <workItem from="1708960443346" duration="9235000" />
-      <workItem from="1709045608297" duration="6049000" />
+      <workItem from="1709045608297" duration="7453000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -403,7 +372,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708964154216</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="write all func">
+      <option name="closed" value="true" />
+      <created>1709056355851</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1709056355851</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add init sql">
+      <option name="closed" value="true" />
+      <created>1709056368101</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1709056368101</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,6 +432,8 @@
     <MESSAGE value="add match results page" />
     <MESSAGE value="write front" />
     <MESSAGE value="add disable buton when match end and small fix with front and back" />
-    <option name="LAST_COMMIT_MESSAGE" value="add disable buton when match end and small fix with front and back" />
+    <MESSAGE value="write all func" />
+    <MESSAGE value="add init sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="add init sql" />
   </component>
 </project>
